@@ -1,39 +1,210 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Letter Match
 
-Welcome,
+_Javascript Essentials Project Portfolio - Code Institute_
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+View deployed site [here.]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+Letter Match is a game for kindergarten children. It's main goal is to 
 
-## Codeanywhere Reminders
+![Responsive Mockup](documentation/readme)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Table of contents
 
-`python3 -m http.server`
+- [User Experience (UX)](#user-experience)
+- [Design](#design)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## User Experience (UX)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+### User stories
 
-`http_server`
+Goals for:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- **First time visitor:**
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- **Returning visitor:**
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- **Frequent user:**
+  
 
-To log into the Heroku toolbelt CLI:
+## Design
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- **Imagery:**
+  xxx
+- **Colour Scheme:**
+  xxx<br>
+  ![Color palette](documentation/readme)
+- **Typography:**
+  [Annie use your teleskope](https://fonts.google.com/specimen/Annie+Use+Your+Telescope) was selected for text content. It's a cute font that is easy to read by children and yet has a certain lightness. 
+  [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed) is an easy-to-read, clear font that is simple to grasp, so it was used for the instructions. 
+  The font [Are you serious](https://fonts.google.com/specimen/Are+You+Serious) was selected for the logo. It represents the fun and joy the game should bring. 
+  > Are You Serious doesn't take itself seriously at all. This is a fun playful font with a very joyful spirit. _(Google Fonts)_
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Wireframes
 
----
+<details>
+<summary>Page bevore game is started</summary>
+<br>
 
-Happy coding!
+![Mobile wireframe](documentation/wireframes)
+![Desktop wireframe](documentation/wireframes)
+
+</details>
+
+<details>
+<summary> about-us.html </summary>
+<br>
+
+![Mobile wireframe](documentation/wireframes)
+![Desktop wireframe](documentation/wireframes)
+
+</details>
+
+<details>
+<summary> gallery.html </summary>
+<br>
+
+![Mobile wireframe](documentation/wireframes)
+![Desktop wireframe](documentation/wireframes)
+
+</details>
+
+<details>
+<summary> contact.html </summary>
+<br>
+
+![Mobile wireframe](documentation/wireframes)
+![Desktop wireframe](documentation/wireframes)
+
+</details>
+
+## Features
+
+### Existing Features
+
+All the pages were created with a mobile first approach and are made responsive. To ensure that the layout of the pages remains consistent even on very large screens, the text body has been given a maximum width and a margin on both sides.  
+
+
+### Features, which I would like to implement in the future
+
+- 
+
+## Technologies Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [Google Fonts](https://fonts.google.com/) was used to import fonts into the style.css.
+- [Font Awesome](https://fontawesome.com/) was used to add icons.
+- [Git](https://git-scm.com/) was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+- [GitHub](https://github.com/) was used to save and store the files for the website.
+- [Balsamiq](https://balsamiq.com/) was used to design the wireframes.
+- [Coloors](https://coolors.co/image-picker) was used to create the color scheme.
+- [iLoveIMG](https://www.iloveimg.com/) was used to cropp and resize the images.
+- [Pixelied](https://pixelied.com/) was used to convert images from jpg to webp
+- [imgtools](https://www.imgtools.co/) was used to resize webp images
+- [Am I Responsive](https://ui.dev/amiresponsive) was used to display the website on different devices.
+- [beautifier](https://beautifier.io/) to beautify the code
+
+## Testing
+
+1. **Validator Testing**
+
+- **[HTML Validator](https://validator.w3.org/)**
+
+  - result for index.html<br>
+    ![HTML results index with errors]()
+   
+
+I also checked all pages in the validator via text-input, and likewise no errors were detected in this way. All I got was an information to avoid trailing slashes in void elements.
+
+- **[CSS Validator](https://jigsaw.w3.org/css-validator/)**
+   - result for styles.css <br>
+     ![CSS result]()
+     The warning is due to import of the Google fonts.
+
+2. **Lighthouse Test** <br>
+   To measure the website against performance, accessibility, SEO and best practice I used [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de).<br>
+   
+- result for index.html:<br>
+  
+  
+
+3. **Manual testing** <br>
+
+To ensure the pages are responsive, I used the Google Chrome developer tools.
+| **Test** | **Test Description** | **Expected Outcome** | **Result**|
+|:---|:---|:---|:---|
+
+
+4. **Browser Compatibility**<br>
+   The tests were conducted using the following browsers:
+
+- 
+
+5. **Bugs**
+
+- 
+
+## Deployment
+
+This site is deployed using GitHub Pages. To deploy it from its GitHub repository to GitHub Pages, I took the following steps:
+1. Log in (or sign up) to GitHub.
+2. Navigate to the repository for this project by selecting [*queenisabaer/isbaner-vineyard*](https://github.com/queenisabaer/isbaner-vineyard)
+3. Click the *Settings* tab above the repository 
+4. In the left-hand menu, select *Pages*
+5. In the section **"Build and deployment"** under *Source* select *Deploy from a branch* 
+6. In the section **"Build and deployment"** under *Branch* select in the first area *main* and in the second *root*
+7. Click the *Save* Button<br>
+After refreshing the settings site for this repository above the **"Build and deployment"** section, you will see the GitHub Pages area with the link to the [view of the live site](https://queenisabaer.github.io/isbaner-vineyard/)
+
+- Forking this GitHub repository
+1.  Log in to GitHub.
+2.  Navigate to the repository for this project by selecting [*queenisabaer/isbaner-vineyard*](https://github.com/queenisabaer/isbaner-vineyard)
+3. Click at the top of the repository on the **Fork** button on the right side
+
+- Clone this repository
+1.  Log in to GitHub.
+2.  Navigate to the repository for this project by selecting [*queenisabaer/isbaner-vineyard*](https://github.com/queenisabaer/isbaner-vineyard)
+3. In the top right corner, click on the green *Code* button
+4. Copy the HTTPS URL in the tab *Local*
+5. Go to the code editor of your choice and open the terminal
+5. Type `git clone` and paste the URL you copied into your terminal
+6. Press the enter key
+
+## Credits
+
+### Content
+
+- 
+
+### Code
+
+- 
+- To understand more about the concepts of JavaScript I used the udemy course: [The complete 2023 Web Development Bootcamp by Dr. Angela Yu](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
+- The following websites were used as a source of knowledge: <br>
+  - [Google](www.google.com)
+  - [mdn](https://developer.mozilla.org/en-US/)
+  - [W3C](https://www.w3.org/)
+  - [W3schools](https://www.w3schools.com/)
+  - [DevDocs](https://devdocs.io/)
+  - [Stack Overflow](https://stackoverflow.com/)
+  - Slack Community
+
+### Media
+
+- Icons on the footer, the header and for links were taken from [Font Awesome](https://fontawesome.com/)
+- The fonts were imported from [Google Fonts](https://fonts.google.com/)
+
+### ReadMe
+
+- A big thank you to [Kera Cudmore](https://github.com/kera-cudmore) and all of her tips on what makes a good README.
+
+### Acknowledgments
+
+- I would like to thank my wonderful mentor Brian Macheria for his numerous tips and great assistance during the creation of this project.
+
+**This is for educational use.**
