@@ -1,0 +1,43 @@
+/* Google Fonts import URL */
+
+@import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Are+You+Serious&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400;1,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* General styles */
+
+body {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    background: url(../images/pexels-magda-ehlers-4116706.webp) no-repeat center center/cover;
+    display: flex;
+}
+
+.game-area{
+    background-color: rgba(251, 288, 234, 0.7);
+    margin: 35px auto;
+    height: 80%;
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: "Are You Serious", serif;
+    font-size: 3rem;
+    color: #78278A;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-top: 5px;
+}
+
+footer {
+    margin-top: auto;
+    padding-bottom: 15px;
+}
