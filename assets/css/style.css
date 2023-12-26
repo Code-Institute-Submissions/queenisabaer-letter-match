@@ -13,8 +13,9 @@ body {
     text-align: center;
     width: 100vw;
     height: 100vh;
-    background-color: #ffffff;
     background: url(../images/pexels-magda-ehlers-4116706.webp) no-repeat center center/cover;
+    /* Fall-back color, if the image doesn't load */
+    background-color: #91D5EA;
     display: flex;
     font-family: "Annie Use Your Telescope", sans-serif;
 }
@@ -42,7 +43,6 @@ h1 {
 /* Footer */
 footer {
     margin-top: auto;
-    padding-bottom: 15px;
 }
 
 .britishcouncil a {
@@ -59,10 +59,21 @@ footer {
 }
 
 .scl-net li {
-    display: inline;
+    display: inline-block;
     font-size: 130%;
 }
 
 .scl-net i {
-    color: #78278A
+    color: #78278A;
+    padding: 0 10px;
+}
+
+/* larger or landscape phones (768px or larger) */
+@media screen and (min-width: 768px) {
+    .btm-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
 }
