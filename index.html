@@ -11,13 +11,29 @@
 </head>
 <body>
     <div class="game">
-        <!-- Heading with logo for letter match -->
+        <!-- Heading with h1 as logo for letter match -->
         <header class="heading">
             <h1>Letter Match</h1>
         </header>
         <main>
+            <!-- Instructions modal -->
             <div>
+                <!-- button to open the modal -->
                 <button class="btn-rules">Instructions</button>
+                <!-- modal content -->
+                <section class="hidden modal">
+                    <div class="modal-content">
+                        <button class="btn-close"><i class="fa-regular fa-circle-xmark"></i></button>
+                        <ol>
+                            <li>Enter your name in the blue input field.</li>
+                            <li>Click the 'Start Game' button.</li>
+                            <li>You will see a letter from the alphabet.</li>
+                            <li>Find the letter that matches this letter in the letter row.</li>
+                            <li>In 30 seconds, try to find as many matches as possible.</li>
+                            <li>You can find the amount of your correct answers in the bottom of the game.</li>
+                        </ol>
+                    </div>
+                </section>
             </div>
             <!-- Welcome panel -->
             <div class="name">

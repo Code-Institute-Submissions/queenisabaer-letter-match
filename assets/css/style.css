@@ -38,7 +38,7 @@ h1 {
     letter-spacing: 1px;
     margin-bottom: 5px;
 }
-
+/* Instructions modal */
 .btn-rules {
     color: #78278A;
     border: 1px solid #78278A;
@@ -50,6 +50,36 @@ h1 {
     font-family: "Barlow Semi Condensed";
     font-size: 1rem;
     padding-bottom: 3px;
+}
+
+.modal-content {
+    font-family: "Barlow Semi Condensed";
+    font-size: 110%;
+    color: #78278A;
+    margin: 10px auto;
+    background: #FBE4EA;
+    background: linear-gradient(45deg, rgba(251,228,234,1) 0%,rgba(145,213,234,1) 100%);
+    padding: 5px;
+    text-align: left;
+    list-style-position: inside;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
+}
+
+.btn-close {
+    background-color: transparent;
+    font-size: 125%;
+    border: none;
+    color: #78278A;
+    align-self: flex-end;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.modal li {
+    margin: 5px;
 }
 
 /* Footer */
