@@ -106,8 +106,10 @@ All the pages were created with a mobile first approach and are made responsive.
 - [iLoveIMG](https://www.iloveimg.com/) was used to cropp and resize the images.
 - [Pixelied](https://pixelied.com/) was used to convert images from jpg to webp
 - [imgtools](https://www.imgtools.co/) was used to resize webp images
+- [CSS Gradient](https://cssgradient.io/) was used to create the gradient background of the instruction button
 - [Am I Responsive](https://ui.dev/amiresponsive) was used to display the website on different devices.
 - [beautifier](https://beautifier.io/) to beautify the code
+- [Pexels](https://www.pexels.com/de-de/) was used to search and load the background image
 
 ## Testing
 
@@ -179,7 +181,7 @@ After refreshing the settings site for this repository above the **"Build and de
 
 ### Content
 
-- 
+- The background image is from Magda Ehlers and was found on the [Pexels](https://www.pexels.com/de-de/foto/kunst-muster-textur-abstrakt-4116706/) website.
 
 ### Code
 

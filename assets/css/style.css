@@ -16,13 +16,12 @@ body {
     background: url(../images/pexels-magda-ehlers-4116706.webp) no-repeat center center/cover;
     /* Fall-back color, if the image doesn't load */
     background-color: #91D5EA;
-    display: flex;
     font-family: "Annie Use Your Telescope", sans-serif;
 }
 
-.game-area{
-    background-color: rgba(251, 288, 234, 0.7);
-    margin: 35px auto;
+.game {
+    background-color: rgba(251, 288, 234, 0.8);
+    margin: 35px auto 0 auto;
     height: 80%;
     width: 80%;
     max-width: 900px;
@@ -38,6 +37,19 @@ h1 {
     font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 5px;
+}
+
+.btn-rules {
+    color: #78278A;
+    border: 1px solid #78278A;
+    width: 100px;
+    height: 25px;
+    background: rgb(145,213,234); /* Fallback color */
+    background: linear-gradient(45deg, rgba(145,213,234,1) 0%, rgba(251,228,234,1) 100%);
+    border-radius: 15px;
+    font-family: "Barlow Semi Condensed";
+    font-size: 1rem;
+    padding-bottom: 3px;
 }
 
 /* Footer */
@@ -70,6 +82,7 @@ footer {
 
 /* larger or landscape phones (768px or larger) */
 @media screen and (min-width: 768px) {
+    /* Make the content of the footer area appear next to each other with space between */
     .btm-container {
         display: flex;
         flex-direction: row;
