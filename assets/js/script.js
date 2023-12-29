@@ -1,3 +1,4 @@
+
 //Wait for the DOM to finish loading and add event listeners to button elements
 document.addEventListener("DOMContentLoaded", function(){
     
@@ -34,3 +35,64 @@ document.addEventListener("DOMContentLoaded", function(){
         })
     }
 })
+
+/*
+Create the modal for the instructions, 
+so that the rules are only visible, when the button is clicked.
+The modal should be closed, when the x-button is clicked
+I used a tutroial by Victor Eke from freeCodeCamp
+*/
+const modalContent = document.querySelector(".modal-content"); 
+const openModalBtn = document.querySelector(".btn-rules");
+const closeModalBtn = document.querySelector(".btn-close");
+
+//Open the modal by removing the hidden class from the modal content
+let openModal = function () {
+    modalContent.classList.remove("hidden");
+  };
+
+  openModalBtn.addEventListener("click", openModal);
+
+//Close the instructions modal by adding the hidden clase to the modal content
+const closeModal = function () {
+    modalContent.classList.add("hidden");
+  };
+
+  closeModalBtn.addEventListener("click", closeModal);
+
+ /** Start the game */
+function startGame () {
+
+}
+
+/* Create letter */
+function letter () {
+
+}
+
+/** create row with letters */
+function letterRow () {
+
+}
+
+/* match the letter and the letter row */
+function match() {
+
+}
+
+function score() {
+
+}
+
+function wrongAnswer() {
+    alert
+};
+    
+
+function correctAnswer() {
+    alert
+}
+
+function timer (){
+
+}

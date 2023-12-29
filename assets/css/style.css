@@ -17,6 +17,7 @@ body {
     /* Fall-back color, if the image doesn't load */
     background-color: #91D5EA;
     font-family: "Annie Use Your Telescope", sans-serif;
+    position: relative;
 }
 
 .game {
@@ -43,6 +44,8 @@ h1 {
 h2 {
     color: #78278A;
     font-weight: 400;
+    margin: 5px;
+    font-size: 175%;
 }
 
 /* Instructions modal */
@@ -57,6 +60,8 @@ h2 {
     font-family: "Barlow Semi Condensed";
     font-size: 110%;
     padding-bottom: 3px;
+    margin-top: 15px;
+    cursor: pointer;
 }
 
 .modal-content {
@@ -72,7 +77,12 @@ h2 {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    width: 75%;
     max-width: max-content;
+    position: absolute;
+    /* to center the modal content after setting its position to absolut*/
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .btn-close {
@@ -85,10 +95,23 @@ h2 {
     margin-top: 5px;
 }
 
-.modal li {
+.btn-close:hover {
+    color: #FA558A;
+    cursor: pointer;
+}
+
+.modal-content li {
     margin: 5px;
 }
 
+.hidden {
+    display: none;
+}
+
+#start {
+    margin-top: 40px;
+    
+}
 /* Name area */
 #name-input {
     background-color: rgba(145, 213, 234, 0.5);
@@ -100,18 +123,18 @@ h2 {
     font-family: "Annie Use Your Telescope";
     font-weight: 400;
     font-size: 125%;
-    color: #78278A;
+    color: #FA558A;
     text-align: center;
 }
 
 /* Start game area*/
 .btn-start {
     background-color: transparent;
-    font-size: 3rem;
-    font-weight: 100;
+    font-size: 5rem;
     border: none;
     color: #78278A;
-    margin-top: 15px;
+    margin-top: 35px;
+    cursor: pointer;
 }
 
 /* Footer */
