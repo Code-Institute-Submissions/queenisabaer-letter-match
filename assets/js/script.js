@@ -54,11 +54,18 @@ let openModal = function () {
   openModalBtn.addEventListener("click", openModal);
 
 //Close the instructions modal by adding the hidden clase to the modal content
-const closeModal = function () {
+let closeModal = function () {
     modalContent.classList.add("hidden");
   };
 
   closeModalBtn.addEventListener("click", closeModal);
+
+  //Close the modal with the escape button(UX)
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !modalContent.classList.contains("hidden")) {
+      closeModal();
+    }
+  });
 
  /** Start the game */
 function startGame () {
