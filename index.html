@@ -26,9 +26,9 @@
                     <ol>
                         <li>Enter your name in the blue input field.</li>
                         <li>Click the 'Start Game' button.</li>
-                        <li>When the game has started, you will see a letter from the alphabet.</li>
+                        <li>In the rhyme you see a blue card with a large purple letter from the alphabet.</li>
                         <li>Find the letter that matches this letter in the letter row.</li>
-                        <li>In 30 seconds, try to find as many matches as possible.</li>
+                        <li>In 45 seconds, try to find as many matches as possible.</li>
                         <li>You can find the amount of your correct answers in the bottom of the game.</li>
                     </ol>
                 </div>
@@ -49,17 +49,17 @@
             <div id="game">
                 <p>Letters, letters, what will it be?</p>
                 <!-- Question area -->
-                <p>I'm looking for <span id="letter">x</span></p>
+                <p>I'm looking for <span id="letter" class="letters">A</span></p>
                 <p><span id="childName">name</span>, where is it to see?</p>
-                <p id="letterMatch">xxx</p>
+                <p id="letterMatch"><span id="letterOne" class="letters">A</span> <span id="letterTwo" class="letters">W</span> <span id="letterThree" class="letters">Z</span> <span id="letterFour" class="letters">G</span> <span id="letterFive" class="letters">M</span></p>
                 <!-- Score area -->
                 <div class="gameBottom">
                     <div id="score">
-                        <p>Correct answers: <span id="answers"></span></p>
+                        <p>Correct answers: <span id="answers">0</span></p>
                     </div>
                     <!-- Timer -->
                     <div id="timer">
-                        <p><i class="fa-solid fa-hourglass-half"></i> 45</p>
+                        <p><i class="fa-solid fa-hourglass-half"></i> <span id="time">45</span></p>
                     </div>
                 </div>
             </div>

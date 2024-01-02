@@ -138,8 +138,42 @@ h2 {
 }
 
 /* Game area */
+#game {
+    color: #FA558A;
+    font-size: 125%;
+}
+.gameBottom {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-top: 30px;
+}
 
-.gameBottom
+#game > p {
+    margin-top: 15px;
+}
+
+#letter {
+    margin-left: 10px;
+}
+
+.letters {
+    color: #78278A;
+    font-size: 200%;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 0 12px;
+    background-color: rgba(145, 213, 234, 0.5);
+}
+
+#answers, #time {
+    font-size: 150%;
+    color: #05A550;;
+}
+
+#letterMatch > span:hover {
+    background-color: rgba(247, 225, 29, 0.5); /* UX: to see which letter was chosen*/
+}
 
 /* Footer */
 footer {
@@ -177,5 +211,9 @@ footer {
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-end;
+    }
+
+    #game {
+        font-size: 2rem;
     }
 }
