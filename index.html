@@ -37,11 +37,30 @@
             <div id="start">
                 <div class="name-area">
                     <h2>What's your name?</h2> 
-                    <input type="text" id="name-input">             
+                    <label for="name-input"></label>
+                    <input type="text" id="name-input" name="name-input">             
                 </div>
                 <div class="start-game">
-                    <button class="btn-start"><i class="fa-regular fa-circle-play"></i></button>
+                    <button class="btn-start" aria-label="start the game"><i class="fa-regular fa-circle-play"></i></button>
                     <h2>Start Game</h2>
+                </div>
+            </div>
+            <!-- Game panel -->
+            <div id="game">
+                <p>Letters, letters, what will it be?</p>
+                <!-- Question area -->
+                <p>I'm looking for <span id="letter">x</span></p>
+                <p><span id="childName">name</span>, where is it to see?</p>
+                <p id="letterMatch">xxx</p>
+                <!-- Score area -->
+                <div class="gameBottom">
+                    <div id="score">
+                        <p>Correct answers: <span id="answers"></span></p>
+                    </div>
+                    <!-- Timer -->
+                    <div id="timer">
+                        <p><i class="fa-solid fa-hourglass-half"></i> 45</p>
+                    </div>
                 </div>
             </div>
         </main>
