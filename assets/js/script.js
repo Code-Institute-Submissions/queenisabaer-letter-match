@@ -14,8 +14,6 @@ const modalContent = document.querySelector(".modal-content");
 const openModalBtn = document.querySelector(".btn-rules");
 const closeModalBtn = document.querySelector(".btn-close");
 const startGameBtn = document.querySelector(".btn-start");
-const start = document.getElementById("start");
-const game = document.getElementById("game");
 
 /*
 Create the modal for the instructions, 
@@ -44,12 +42,28 @@ document.addEventListener("keydown", function (event) {
 /** startGame function should hide the welcome panel
  * and display the game area with question, score and timer */
 function startGame () {
+    let start = document.getElementById("start");
+    let game = document.getElementById("game");
     start.classList.add("hidden"); //hide the first panel
     game.classList.remove("hidden"); //display the game area
-
+    
+    nameInput();
     letter();
     letterRow();
     timer();
+}
+
+function nameInput () {
+    //Get the childs name from the name input field in the first panel
+    let name = document.getElementById("name-input").value;
+    if (name) {
+        //Display the name of the child inside the game rhyme
+        document.getElementById("childName").innerHTML = name;
+    } else {
+        //Display a placeholder, if no name was entered
+        document.getElementById("childName").innerHTML = "Abecedarian"; 
+    }
+    
 }
 
 /* Create a letter for matching with the letter row */

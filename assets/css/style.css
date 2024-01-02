@@ -166,7 +166,7 @@ h2 {
     background-color: rgba(145, 213, 234, 0.5);
 }
 
-#answers, #time {
+#answers, #time, #childName {
     font-size: 150%;
     color: #05A550;;
 }
