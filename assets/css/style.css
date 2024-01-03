@@ -133,7 +133,7 @@ h2 {
 }
 
 /* Start game area*/
-.btn-start {
+.btn-start, .btn-restart {
     background-color: transparent;
     font-size: 5rem;
     border: none;

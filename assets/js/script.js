@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function(){
     closeModalBtn.addEventListener("click", closeModal);
     //Event listener for the Start Game button so the startGame function runs
     startGameBtn.addEventListener("click", startGame);
+
+    
 })
 
 // Variables for modal and game start
@@ -14,7 +16,6 @@ const modalContent = document.querySelector(".modal-content");
 const openModalBtn = document.querySelector(".btn-rules");
 const closeModalBtn = document.querySelector(".btn-close");
 const startGameBtn = document.querySelector(".btn-start");
-
 /*
 Create the modal for the instructions, 
 so that the rules are only visible, when the button is clicked.
@@ -87,7 +88,7 @@ function score() {
 
 function wrongAnswer() {
     alert
-};
+}
     
 
 function correctAnswer() {
@@ -102,6 +103,7 @@ function timer (){
         if(timeleft <= 0){
             clearInterval(downloadTimer);
             restartGame();
+            document.getElementById("time").innerHTML = "Go!";
         } else {
             document.getElementById("time").innerHTML = timeleft;
         }
@@ -110,10 +112,16 @@ function timer (){
 }
 
 /** Should display the score and the start game button */
+
 function restartGame () {
-    //hide the game panel and display the restart
+    //hide the game panel and display the restart panel
     let restart = document.getElementById("restart");
     let endgame = document.getElementById("game");
     restart.classList.remove("hidden"); 
     endgame.classList.add("hidden"); 
+    //restart the game by clicking the button
+    document.querySelector(".btn-restart").addEventListener("click", e => {
+        restart.classList.add("hidden"); 
+        startGame(); 
+    });
 }
