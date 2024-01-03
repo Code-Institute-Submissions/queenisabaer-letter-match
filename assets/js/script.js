@@ -66,12 +66,12 @@ function nameInput () {
     
 }
 
-/* Create a letter for matching with the letter row */
+/** Create a letter for matching with the letter row */
 function letter () {
 
 }
 
-/** create row with letters */
+/** Create row with letters */
 function letterRow () {
 
 }
@@ -94,6 +94,22 @@ function correctAnswer() {
     alert
 }
 
+/** Starts the games countdown as soon as start game button is clicked */
 function timer (){
+    //Used the instruction by James McDowell on Stack Overflow
+    let timeleft = 45;
+    let downloadTimer = setInterval(function(){
+        if(timeleft <= 0){
+            clearInterval(downloadTimer);
+            document.getElementById("time").innerHTML = "Finished";
+            restartGame();
+        } else {
+            document.getElementById("time").innerHTML = timeleft;
+        }
+        timeleft -= 1;
+    }, 1000);
+}
 
+function restartGame () {
+    
 }

@@ -187,7 +187,7 @@ After refreshing the settings site for this repository above the **"Build and de
 
 - The instructions modal was created with the help of the tutorial by [Viktor Eke from freeCodeCamp](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/)
 - To center the instructions modal I used an explanation from [Stack Overflow](https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element).
-- 
+- To create the countdown I used the instruction by [James McDowell on Stack Overflow](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown)
 - To understand more about the concepts of JavaScript I used the udemy course: [The complete 2023 Web Development Bootcamp by Dr. Angela Yu](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
 - The following websites were used as a source of knowledge: <br>
   - [Google](www.google.com)
