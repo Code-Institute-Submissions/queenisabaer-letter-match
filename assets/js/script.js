@@ -97,11 +97,10 @@ function correctAnswer() {
 /** Starts the games countdown as soon as start game button is clicked */
 function timer (){
     //Used the instruction by James McDowell on Stack Overflow
-    let timeleft = 45;
+    let timeleft = 5;
     let downloadTimer = setInterval(function(){
         if(timeleft <= 0){
             clearInterval(downloadTimer);
-            document.getElementById("time").innerHTML = "Finished";
             restartGame();
         } else {
             document.getElementById("time").innerHTML = timeleft;
@@ -110,6 +109,11 @@ function timer (){
     }, 1000);
 }
 
+/** Should display the score and the start game button */
 function restartGame () {
-    
+    //hide the game panel and display the restart
+    let restart = document.getElementById("restart");
+    let endgame = document.getElementById("game");
+    restart.classList.remove("hidden"); 
+    endgame.classList.add("hidden"); 
 }

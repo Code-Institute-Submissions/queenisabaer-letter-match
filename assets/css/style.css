@@ -48,6 +48,11 @@ h2 {
     font-size: 175%;
 }
 
+.text {
+    color: #FA558A;
+    font-size: 125%;
+}
+
 /* Instructions modal */
 .btn-rules {
     color: #78278A;
@@ -108,10 +113,10 @@ h2 {
     display: none;
 }
 
-#start {
+#start, #restart {
     margin-top: 40px;
-    
 }
+
 /* Name area */
 #name-input {
     background-color: rgba(145, 213, 234, 0.5);
@@ -138,10 +143,6 @@ h2 {
 }
 
 /* Game area */
-#game {
-    color: #FA558A;
-    font-size: 125%;
-}
 .gameBottom {
     display: flex;
     align-items: baseline;
@@ -162,7 +163,7 @@ h2 {
     font-size: 200%;
     border: 1px solid;
     border-radius: 3px;
-    padding: 0 12px;
+    padding: 0 10px;
     background-color: rgba(145, 213, 234, 0.5);
 }
 
@@ -215,5 +216,9 @@ footer {
 
     #game {
         font-size: 2rem;
+    }
+    /* Add some space between the letters and the border of the cards */
+    .letters {
+        padding: 0 15px;
     }
 }
