@@ -20,7 +20,7 @@ body {
     position: relative;
 }
 
-.game {
+.gameBody {
     background-color: rgba(251, 288, 234, 0.8);
     margin: 35px auto 0 auto;
     height: 90%;
@@ -214,8 +214,8 @@ footer {
         align-items: flex-end;
     }
 
-    #game {
-        font-size: 2rem;
+    #game, #restart {
+        font-size: 150%;
     }
     /* Add some space between the letters and the border of the cards */
     .letters {

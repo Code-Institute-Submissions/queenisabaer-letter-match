@@ -97,6 +97,7 @@ All the pages were created with a mobile first approach and are made responsive.
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) 
 - [Google Fonts](https://fonts.google.com/) was used to import fonts into the style.css.
 - [Font Awesome](https://fontawesome.com/) was used to add icons.
 - [Git](https://git-scm.com/) was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
@@ -201,7 +202,7 @@ After refreshing the settings site for this repository above the **"Build and de
 
 ### Media
 
-- Icons on the footer, the header and for links were taken from [Font Awesome](https://fontawesome.com/)
+- Icons on the footer, the game and for links were taken from [Font Awesome](https://fontawesome.com/)
 - The fonts were imported from [Google Fonts](https://fonts.google.com/)
 
 ### ReadMe
