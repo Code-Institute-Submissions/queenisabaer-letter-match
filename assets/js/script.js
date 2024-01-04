@@ -78,7 +78,7 @@ function nameInput () {
     }
 }
 
-/** Create random letters for the letter cards */
+/** Create random letter for the letter cards */
 function letter () {
     //Create an array with the length of 26, turn into uppercase(65) letters
     let alphabet = Array.from({length: 26}, (v, n) => String.fromCharCode(n + 65));
@@ -95,32 +95,62 @@ function letter () {
 /** Create a row with letters inside the rhyme */
 function letterRow () {
     //Each letter card should contain a random letter from the alphabet, but not the same
-    document.getElementById("letterOne").innerText = letter();
-    document.getElementById("letterTwo").innerText = letter();
-    document.getElementById("letterThree").innerText = letter();
-    document.getElementById("letterFour").innerText = letter();
-    document.getElementById("letterFive").innerText = letter();
-
+  
+        let letterOne = document.getElementById("letterOne");
+        letterOne.innerText = letter();
+        let letterTwo = document.getElementById("letterTwo");
+        letterTwo.innerText = letter();
+        let letterThree = document.getElementById("letterThree");
+        letterThree.innerText = letter();
+        let letterFour = document.getElementById("letterFour");
+        letterFour.innerText = letter();
+        let letterFive = document.getElementById("letterFive");
+        letterFive.innerText = letter();
+        
+    let letterZero = document.getElementById("letterZero");
+    letterZero.value = letterRow[Math.floor(Math.random() * letterRow.length)];
 }
 
 /* match the letter and the letter row */
-function match(x, ) {
-    if (letter === letter2){
+function match() {
+    document.getElementById("letterZero").value = letterRow;
 
-    }
 }
 
 function score() {
+    let oldScore = parseInt(document.getElementById("answers").innerText);
+    //increase the correct answers by adding one
+    document.getElementById("answers").innerText = ++oldScore;
 
 }
-
-function wrongAnswer() {
-    alert
-}
-    
+   
 
 function correctAnswer() {
-    alert
+    //read the childrens click from the DOM
+    // should return as integer(parseInt), 
+
+
+    
+    //if answer was correct and value becomes true
+    //congratulate child and increase correct answers
+    //start new 
+    var correct = document.getElementById("correct");
+    var wrong = document.getElementById("wrong");
+    if (isCorrect) {
+        correct.classList.remove("hidden");
+        setTimeout(function() {
+            correct.classList.add("hidden");
+            }, 3000);
+        incrementScore();
+        letterRow();
+    } else { 
+        wrong.classList.remove("hidden");
+        setTimeout(function() {
+            wrong.classList.add("hidden");
+            }, 3000);
+        letterRow();
+    }
+  
 }
 
 /** Starts the games countdown as soon as button to start the game is clicked */

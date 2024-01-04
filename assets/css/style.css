@@ -178,6 +178,12 @@ h2 {
     background-color: rgba(247, 225, 29, 0.5); /* UX: to see which letter was chosen*/
 }
 
+/* When lettercard inside the letter row is clicked, apply a 3 seconds transition to its size */
+#letterMatch > span:active {
+    transform: scale(0.97);
+    transition: transform .3s;
+}
+
 /* Footer */
 footer {
     margin-top: auto;

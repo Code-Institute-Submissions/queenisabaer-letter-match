@@ -38,7 +38,7 @@
                 <div class="name-area">
                     <h2>What's your name?</h2> 
                     <label for="name-input"></label>
-                    <input type="text" id="name-input" name="name-input">             
+                    <input type="text" id="name-input" name="name-input" maxlength="15">             
                 </div>
                 <div class="start-game">
                     <button class="btn-start" aria-label="start the game"><i class="fa-regular fa-circle-play"></i></button>
@@ -52,6 +52,9 @@
                 <p class="text">I'm looking for <span id="letterZero" class="letterCard">I</span></p>
                 <p class="text"><span id="childName">name</span>, where is it to see?</p>
                 <p id="letterMatch"><span id="letterOne" class="letterCard">A</span> <span id="letterTwo" class="letterCard">W</span> <span id="letterThree" class="letterCard">Z</span> <span id="letterFour" class="letterCard">G</span> <span id="letterFive" class="letterCard">M</span></p>
+                <!-- Well done / Try again -->
+                <p id="correct" class="modal-content hidden">Well done! &#128077;</p>
+                <p id="wrong" class="modal-content hidden">Sorry, that was not the right answer. &#128547;</p>
                 <!-- Score area -->
                 <div class="gameBottom">
                     <div id="score">
