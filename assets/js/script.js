@@ -9,6 +9,14 @@ document.addEventListener("DOMContentLoaded", function(){
     startGameBtn.addEventListener("click", startGame);
     //UX: set cursor in the name input as soon as page is loaded,
     document.getElementById("name-input").focus();
+
+    //Add event listener to name input box, so when the key "enter" is pressed down, the startGame function runs (UX)
+    document.getElementById('name-input').addEventListener("keydown", function(event){
+        //check a property of that event object, which is the key property
+        if (event.key === "Enter") {
+            startGame();     // if enter key was pressed, the startGame function runs
+        }
+    })
 })
 
 // Variables for modal and game start
@@ -52,9 +60,9 @@ function startGame () {
     game.classList.remove("hidden"); //display the game area
     
     nameInput();
+    timer();
     letter();
     letterRow();
-    timer();
     score();
 }
 
@@ -70,7 +78,7 @@ function nameInput () {
     }
 }
 
-/** Create a random letter for matching with the letter row */
+/** Create random letters for the letter cards */
 function letter () {
     //Create an array with the length of 26, turn into uppercase(65) letters
     let alphabet = Array.from({length: 26}, (v, n) => String.fromCharCode(n + 65));
@@ -86,21 +94,13 @@ function letter () {
 
 /** Create a row with letters inside the rhyme */
 function letterRow () {
-
-    //variables for the letter row
+    //Each letter card should contain a random letter from the alphabet, but not the same
     document.getElementById("letterOne").innerText = letter();
     document.getElementById("letterTwo").innerText = letter();
     document.getElementById("letterThree").innerText = letter();
     document.getElementById("letterFour").innerText = letter();
     document.getElementById("letterFive").innerText = letter();
 
- 
-    //create variable called operand 1 that stores the inner text(the value) of element with id operand1
-    let operand1 = parseInt(document.getElementById('operand1').innerText);
-    //create variable called operand 2 that stores the inner text(the value) of element with id operand2
-    let operand2 = parseInt(document.getElementById('operand2').innerText);
-    //creates a variable called operator, that reads the text content of element with id operator
-    let operator = document.getElementById('operator').innerText;
 }
 
 /* match the letter and the letter row */

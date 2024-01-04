@@ -154,11 +154,11 @@ h2 {
     margin-top: 15px;
 }
 
-#letter {
+#letterZero {
     margin-left: 10px;
 }
 
-.letters {
+.letterCard {
     color: #78278A;
     font-size: 200%;
     border: 1px solid;
@@ -218,7 +218,7 @@ footer {
         font-size: 150%;
     }
     /* Add some space between the letters and the border of the cards */
-    .letters {
+    .letterCard {
         padding: 0 15px;
     }
 }
