@@ -65,6 +65,13 @@ function startGame () {
 function nameInput () {
     //Get the childs name from the name input field in the first panel
     let name = document.getElementById("name-input").value;
+
+     // Check if the name contains numbers
+     if (/\d/.test(name)) {
+        alert("The name should not contain numbers");
+        window.location.reload();
+    }
+
     if (name) {
         //Display the name of the child inside the game rhyme
         document.getElementById("childName").innerHTML = name;
@@ -156,9 +163,9 @@ function correctAnswer() {
 function timer (){
     //Used the instruction by James McDowell on Stack Overflow
     let timeleft = 5;
-    let downloadTimer = setInterval(function(){
+    let countdownTimer = setInterval(function(){
         if(timeleft <= 0){
-            clearInterval(downloadTimer);
+            clearInterval(countdownTimer);
             restartGame();
             document.getElementById("time").innerHTML = "Go!";
         } else {
