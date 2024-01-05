@@ -8,7 +8,6 @@
 }
 
 /* General styles */
-
 body {
     text-align: center;
     width: 100vw;
@@ -26,9 +25,10 @@ body {
     height: 90%;
     width: 80%;
     max-width: 900px;
-    max-height: fit-content;
+    max-height: 800px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 10px;
 }
 
@@ -44,7 +44,7 @@ h1 {
 h2 {
     color: #78278A;
     font-weight: 400;
-    margin: 5px;
+    margin: 10px;
     font-size: 175%;
 }
 
@@ -169,7 +169,7 @@ h2 {
     width: 20px;
 }
 
-#answers, #time, #childName {
+#answers, #time, #childName, #score {
     font-size: 150%;
     color: #05A550;;
 }
@@ -185,10 +185,6 @@ h2 {
 }
 
 /* Footer */
-footer {
-    margin-top: auto;
-}
-
 .britishcouncil a {
     text-decoration: none;
     color: #78278A;
@@ -214,17 +210,30 @@ footer {
 
 /* larger or landscape phones (768px or larger) */
 @media screen and (min-width: 768px) {
+    /* Make the logo and text larger */
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    #game, #restart {
+        font-size: 150%;
+    }
+
+    .btn-rules {
+        height: 35px;
+        width: 150px;
+        font-size: 125%;
+    }
+
     /* Make the content of the footer area appear next to each other with space between */
     .btm-container {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-end;
+        font-size: 125%;
     }
 
-    #game, #restart {
-        font-size: 150%;
-    }
     /* Add some space between the letters and the border of the cards */
     .letterCard {
         padding: 0 15px;

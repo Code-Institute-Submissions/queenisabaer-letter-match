@@ -190,6 +190,7 @@ After refreshing the settings site for this repository above the **"Build and de
 - To center the instructions modal I used an explanation from [Stack Overflow](https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element).
 - To create the countdown I used the instruction by [James McDowell on Stack Overflow](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown)
 - I found a great explanation for setting the restart button in the [Treehouse Community](https://teamtreehouse.com/community/any-one-know-how-to-make-a-restart-button)
+- How to add and remove a class after a period of time, was found at [ITSourceCode.com] (https://itsourcecode.com/javascript-tutorial/how-to-add-and-remove-class-after-5-seconds-in-javascript/).
 - To understand more about the concepts of JavaScript I used the udemy course: [The complete 2023 Web Development Bootcamp by Dr. Angela Yu](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
 - The following websites were used as a source of knowledge: <br>
   - [Google](www.google.com)

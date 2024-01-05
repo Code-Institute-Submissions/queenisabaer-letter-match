@@ -1,4 +1,3 @@
-
 //Wait for the DOM to finish loading and add event listeners to button elements
 document.addEventListener("DOMContentLoaded", function(){
     //Event listener for the instructions button
@@ -51,8 +50,8 @@ document.addEventListener("keydown", function (event) {
   });
 
 /** startGame function should hide the welcome panel,
- * display the game area with question, score and timer 
- * and start the game with the correct name input, letters in the lettercards, the score and the timer */
+ * display the game area and start the game 
+ * it should run again when restart game button is clicked */
 function startGame () {
     let start = document.getElementById("start");
     let game = document.getElementById("game");
@@ -63,7 +62,6 @@ function startGame () {
     timer();
     letter();
     letterRow();
-    score();
 }
 
 function nameInput () {
@@ -73,8 +71,8 @@ function nameInput () {
         //Display the name of the child inside the game rhyme
         document.getElementById("childName").innerHTML = name;
     } else {
-        //Display a placeholder, if no name was entered
-        document.getElementById("childName").innerHTML = "Abecedarian"; 
+     //Display a placeholder, if no name was entered
+     document.getElementById("childName").innerHTML = "Abecedarian"; 
     }
 }
 
@@ -93,64 +91,66 @@ function letter () {
 }
 
 /** Create a row with letters inside the rhyme */
-function letterRow () {
-    //Each letter card should contain a random letter from the alphabet, but not the same
-  
-        let letterOne = document.getElementById("letterOne");
-        letterOne.innerText = letter();
-        let letterTwo = document.getElementById("letterTwo");
-        letterTwo.innerText = letter();
-        let letterThree = document.getElementById("letterThree");
-        letterThree.innerText = letter();
-        let letterFour = document.getElementById("letterFour");
-        letterFour.innerText = letter();
-        let letterFive = document.getElementById("letterFive");
-        letterFive.innerText = letter();
-        
-    let letterZero = document.getElementById("letterZero");
-    letterZero.value = letterRow[Math.floor(Math.random() * letterRow.length)];
+function letterRow () { //Each letter card should contain a random letter from the alphabet, but not the same
+    //Create for each letter card a random letter 
+    let letterOne = document.getElementById("letterOne");
+    letterOne.innerText = letter();
+    let letterTwo = document.getElementById("letterTwo");
+    letterTwo.innerText = letter();
+    let letterThree = document.getElementById("letterThree");
+    letterThree.innerText = letter();
+    let letterFour = document.getElementById("letterFour");
+    letterFour.innerText = letter();
+    let letterFive = document.getElementById("letterFive");
+    letterFive.innerText = letter();
+
+    //Make sure no letter is used twice
+
 }
 
-/* match the letter and the letter row */
+/* match the letter in the rhyme and one letter from the letter row */
 function match() {
-    document.getElementById("letterZero").value = letterRow;
+    //Get the letter in the rhyme
+    let letterZero = document.getElementById("letterZero");
+    //Set its value to one of the letters in the letter row
 
 }
 
-function score() {
+/** Get current score from the DOM and increment it by 1 */
+function incrementScore() {
+    //Get the old score from the dom
     let oldScore = parseInt(document.getElementById("answers").innerText);
     //increase the correct answers by adding one
     document.getElementById("answers").innerText = ++oldScore;
-
 }
    
-
+/** Checks if answer was correct or not and runs the corresponding functions */
 function correctAnswer() {
     //read the childrens click from the DOM
     // should return as integer(parseInt), 
 
 
     
-    //if answer was correct and value becomes true
-    //congratulate child and increase correct answers
-    //start new 
+    //if answer was correct and value becomes true,
     var correct = document.getElementById("correct");
     var wrong = document.getElementById("wrong");
-    if (isCorrect) {
+    //if the answer was correct, the well done box should appear for 3 seconds, the score should increase by one
+    //and the the letters should shuffle again
+    if (isCorrect) { 
         correct.classList.remove("hidden");
+        //to add the class after 3 seconds I used the instruction by Caren Bautista from ITSourceCode.com
         setTimeout(function() {
             correct.classList.add("hidden");
             }, 3000);
         incrementScore();
         letterRow();
-    } else { 
+    } else { //if the answer was wrong, the wrong answer box should appear for 3 seconds and the letters should shuffle again
         wrong.classList.remove("hidden");
         setTimeout(function() {
             wrong.classList.add("hidden");
             }, 3000);
         letterRow();
     }
-  
 }
 
 /** Starts the games countdown as soon as button to start the game is clicked */
@@ -176,9 +176,14 @@ function restartGame () {
     let endgame = document.getElementById("game");
     restart.classList.remove("hidden"); 
     endgame.classList.add("hidden"); 
+
+    // Add final score to restart game panel
+    document.getElementById("score").innerText = document.getElementById("answers").innerText;
+
     //restart the game by clicking the button
     document.querySelector(".btn-restart").addEventListener("click", e => {
         restart.classList.add("hidden"); 
-        startGame(); 
+        startGame();
+        document.getElementById("answers").innerText = 0; //Set the score back to 0
     });
 }
