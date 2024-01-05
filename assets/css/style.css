@@ -210,6 +210,10 @@ h2 {
 
 /* larger or landscape phones (768px or larger) */
 @media screen and (min-width: 768px) {
+    .gameBody {
+        margin-top: 40px;
+    }
+
     /* Make the logo and text larger */
     h1 {
         font-size: 4.5rem;

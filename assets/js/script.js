@@ -57,11 +57,9 @@ function startGame () {
     let game = document.getElementById("game");
     start.classList.add("hidden"); //hide the first panel
     game.classList.remove("hidden"); //display the game area
-    
+    letterInput();
     nameInput();
     timer();
-    letter();
-    letterRow();
 }
 
 function nameInput () {
@@ -76,44 +74,45 @@ function nameInput () {
     }
 }
 
-/** Create random letter for the letter cards */
-function letter () {
-    //Create an array with the length of 26, turn into uppercase(65) letters
-    let alphabet = Array.from({length: 26}, (v, n) => String.fromCharCode(n + 65));
-    /* 
-    Math.random generates random number between 0 and 1 and
-    is than multiplied by length property of alphabet array to get random index. 
-    To round to the nearest integer and get a valid index within the alphabet array, use Math.floor() function.
-    Use this index to pick a random element from the alphabet array and store it in the randomLetter variable.
-    */
-    var randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];  
-    return randomLetter;
+/** Create array of letters */
+function getLetters (){
+    let letters = [];
+    while (letters.length < 5) {
+        let letter = getRandomLetter ();
+        
+        //if the letter is already in the letters, don't add it, loop again
+        if (letters.includes(letter)) {
+            continue;
+        } else {
+            letters.push(letter);
+        }
+    }
+    return letters
 }
 
-/** Create a row with letters inside the rhyme */
-function letterRow () { //Each letter card should contain a random letter from the alphabet, but not the same
-    //Create for each letter card a random letter 
-    let letterOne = document.getElementById("letterOne");
-    letterOne.innerText = letter();
-    let letterTwo = document.getElementById("letterTwo");
-    letterTwo.innerText = letter();
-    let letterThree = document.getElementById("letterThree");
-    letterThree.innerText = letter();
-    let letterFour = document.getElementById("letterFour");
-    letterFour.innerText = letter();
-    let letterFive = document.getElementById("letterFive");
-    letterFive.innerText = letter();
-
-    //Make sure no letter is used twice
-
+/** Create random letters for the getLetters function */
+function getRandomLetter (){
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let randomIndexAlphabet = Math.floor(Math.random() * alphabet.length);
+    return alphabet[randomIndexAlphabet];
 }
 
-/* match the letter in the rhyme and one letter from the letter row */
-function match() {
-    //Get the letter in the rhyme
-    let letterZero = document.getElementById("letterZero");
-    //Set its value to one of the letters in the letter row
+/** Pick one random letter from the letter array and return it for matching in the question */
+function getQuestionLetter (letters) {
+    let randomIndexLetter = Math.floor(Math.random() * letters.length);
+    return letters[randomIndexLetter];
+}
 
+function letterInput () {
+ //Create the letters in the letter row and in the game question
+  let letters = getLetters();
+  let questionLetter = getQuestionLetter (letters);
+  document.getElementById("letterZero").innerText = questionLetter;
+  document.getElementById("letterOne").innerText = letters[0];
+  document.getElementById("letterTwo").innerText = letters[1];
+  document.getElementById("letterThree").innerText = letters[2];
+  document.getElementById("letterFour").innerText = letters[3];
+  document.getElementById("letterFive").innerText = letters[4];
 }
 
 /** Get current score from the DOM and increment it by 1 */
@@ -143,7 +142,7 @@ function correctAnswer() {
             correct.classList.add("hidden");
             }, 3000);
         incrementScore();
-        letterRow();
+        letterInput();
     } else { //if the answer was wrong, the wrong answer box should appear for 3 seconds and the letters should shuffle again
         wrong.classList.remove("hidden");
         setTimeout(function() {
