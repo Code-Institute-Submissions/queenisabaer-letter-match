@@ -130,20 +130,15 @@ function incrementScore() {
     document.getElementById("answers").innerText = ++oldScore;
 }
    
-/** Checks what is the correct answer */
-function correctAnswer() {
-
-    //read the childrens click from the DOM
-    // should return as integer(parseInt), 
-
-
-    
-    //if answer was correct and value becomes true,
+/** Checks what is the correct answer based on which letter was clicked*/
+function correctAnswer(clickedLetter) {
     var correct = document.getElementById("correct");
     var wrong = document.getElementById("wrong");
 
     //Check if the clicked letter matches the letter in the rhyme
-    if (isCorrect) { 
+    let questionLetter = document.getElementById("letterZero").innerText;
+
+    if (clickedLetter === questionLetter) { 
         //if the answer was correct, display the well done box for 3 seconds, 
         //increase score by one and shuffle the letters again
         correct.classList.remove("hidden");
@@ -164,14 +159,19 @@ function correctAnswer() {
     }
 }
 
+//Add eventlisteners for the letterCards
+document.getElementById("letterOne").addEventListener("click", function () { correctAnswer("letterOne");});
+document.getElementById("letterTwo").addEventListener("click", function () {correctAnswer("letterTwo");});
+document.getElementById("letterThree").addEventListener("click", function () {correctAnswer("letterTwo");});
+document.getElementById("letterFour").addEventListener("click", function () {correctAnswer("letterTwo");});
+document.getElementById("letterFive").addEventListener("click", function () {correctAnswer("letterTwo");});
+
 /** Check which letter was clicked */
-function checkAnswer (){
-    //Add eventlisteners for the letterCards
-    document.getElementById("letterOne").addEventListener("click", function correctAnswer(){});
-    document.getElementById("letterTwo").addEventListener("click", function correctAnswer(){});
-    document.getElementById("letterThree").addEventListener("click", function correctAnswer(){})
-    document.getElementById("letterFour").addEventListener("click", function correctAnswer(){});
-    document.getElementById("letterFive").addEventListener("click", function correctAnswer(){});
+function checkAnswer (clickedLetterID){
+    //Get clicked letter by its id
+    var clickedLetter = document.getElementById(clickedLetterID).innerText;
+    correctAnswer(clickedLetter);
+
 }
 
 /** Starts the games countdown as soon as button to start the game is clicked */
