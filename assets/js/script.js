@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
     openModalBtn.addEventListener("click", openModal);
     //Event listener for the close button inside of the instructions button
     closeModalBtn.addEventListener("click", closeModal);
-    //Event listener for the Start Game button so the startGame function runs
+    //Event listener for the Start Game button so the nameInput function runs
     startGameBtn.addEventListener("click", nameInput);
     //UX: set cursor in the name input as soon as page is loaded,
     document.getElementById("name-input").focus();
@@ -130,8 +130,9 @@ function incrementScore() {
     document.getElementById("answers").innerText = ++oldScore;
 }
    
-/** Checks if answer was correct or not and runs the corresponding functions */
+/** Checks what is the correct answer */
 function correctAnswer() {
+
     //read the childrens click from the DOM
     // should return as integer(parseInt), 
 
@@ -140,9 +141,11 @@ function correctAnswer() {
     //if answer was correct and value becomes true,
     var correct = document.getElementById("correct");
     var wrong = document.getElementById("wrong");
-    //if the answer was correct, the well done box should appear for 3 seconds, the score should increase by one
-    //and the the letters should shuffle again
+
+    //Check if the clicked letter matches the letter in the rhyme
     if (isCorrect) { 
+        //if the answer was correct, display the well done box for 3 seconds, 
+        //increase score by one and shuffle the letters again
         correct.classList.remove("hidden");
         //to add the class after 3 seconds I used the instruction by Caren Bautista from ITSourceCode.com
         setTimeout(function() {
@@ -150,13 +153,25 @@ function correctAnswer() {
             }, 3000);
         incrementScore();
         letterInput();
-    } else { //if the answer was wrong, the wrong answer box should appear for 3 seconds and the letters should shuffle again
+    } else { 
+        //if the answer was wrong, 
+        //diplay wrong answer box  for 3 seconds and shuffle the letters again
         wrong.classList.remove("hidden");
         setTimeout(function() {
             wrong.classList.add("hidden");
             }, 3000);
         letterRow();
     }
+}
+
+/** Check which letter was clicked */
+function checkAnswer (){
+    //Add eventlisteners for the letterCards
+    document.getElementById("letterOne").addEventListener("click", function correctAnswer(){});
+    document.getElementById("letterTwo").addEventListener("click", function correctAnswer(){});
+    document.getElementById("letterThree").addEventListener("click", function correctAnswer(){})
+    document.getElementById("letterFour").addEventListener("click", function correctAnswer(){});
+    document.getElementById("letterFive").addEventListener("click", function correctAnswer(){});
 }
 
 /** Starts the games countdown as soon as button to start the game is clicked */

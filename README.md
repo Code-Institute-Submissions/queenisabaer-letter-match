@@ -213,5 +213,6 @@ After refreshing the settings site for this repository above the **"Build and de
 ### Acknowledgments
 
 - I would like to thank my wonderful mentor Brian Macheria for his numerous tips and great assistance during the creation of this project.
+- Furthermore I would like to thank Niclas Hugdahl for helping me get the right twist for my name input function on [Slack](https://code-institute-room.slack.com/archives/C027C3PLS1W/p1704450676525039). 
 
 **This is for educational use.**
