@@ -36,9 +36,11 @@
             <!-- First panel -->
             <div id="start">
                 <div class="name-area">
-                    <h2>What's your name?</h2> 
+                    <h2>What's your name?<sup>*</sup></h2> 
                     <label for="name-input"></label>
-                    <input type="text" id="name-input" name="name-input" maxlength="15">             
+                    <input type="text" id="name-input" name="name-input" maxlength="15">
+                    <p class="supText"><sup>*</sup>max. 15 characters</p>
+                    <div class="text" id="nameCheck"></div>             
                 </div>
                 <div class="start-game">
                     <button class="btn-start" aria-label="start the game"><i class="fa-regular fa-circle-play"></i></button>

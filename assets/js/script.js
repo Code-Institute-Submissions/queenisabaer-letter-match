@@ -5,15 +5,14 @@ document.addEventListener("DOMContentLoaded", function(){
     //Event listener for the close button inside of the instructions button
     closeModalBtn.addEventListener("click", closeModal);
     //Event listener for the Start Game button so the startGame function runs
-    startGameBtn.addEventListener("click", startGame);
+    startGameBtn.addEventListener("click", nameInput);
     //UX: set cursor in the name input as soon as page is loaded,
     document.getElementById("name-input").focus();
-
     //Add event listener to name input box, so when the key "enter" is pressed down, the startGame function runs (UX)
     document.getElementById('name-input').addEventListener("keydown", function(event){
-        //check a property of that event object, which is the key property
-        if (event.key === "Enter") {
-            startGame();     // if enter key was pressed, the startGame function runs
+    //check a property of that event object, which is the key property
+    if (event.key === "Enter") {  
+        nameInput();     // if enter key was pressed, the nameInput function runs
         }
     })
 })
@@ -58,27 +57,28 @@ function startGame () {
     start.classList.add("hidden"); //hide the first panel
     game.classList.remove("hidden"); //display the game area
     letterInput();
-    nameInput();
     timer();
 }
 
 function nameInput () {
     //Get the childs name from the name input field in the first panel
     let name = document.getElementById("name-input").value;
+    let nameError = document.getElementById("nameCheck");
 
      // Check if the name contains numbers
      if (/\d/.test(name)) {
-        alert("The name should not contain numbers");
-        window.location.reload();
+        nameError.innerText= "The name should not contain numbers";
+        return; //Stop further execution
     }
-
     if (name) {
         //Display the name of the child inside the game rhyme
         document.getElementById("childName").innerHTML = name;
     } else {
-     //Display a placeholder, if no name was entered
-     document.getElementById("childName").innerHTML = "Abecedarian"; 
+        //Display a placeholder, if no name was entered
+        document.getElementById("childName").innerHTML = "Abecedarian"; 
     }
+    //Continue with starting the game
+    startGame();
 }
 
 /** Create array of letters */

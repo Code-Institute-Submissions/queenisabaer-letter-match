@@ -132,6 +132,11 @@ h2 {
     text-align: center;
 }
 
+.supText {
+    font-size: 1rem;
+    color: #FA558A;
+}
+
 /* Start game area*/
 .btn-start, .btn-restart {
     background-color: transparent;
