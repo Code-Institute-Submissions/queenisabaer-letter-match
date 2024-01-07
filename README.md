@@ -2,11 +2,11 @@
 
 _Javascript Essentials Project Portfolio - Code Institute_
 
-View deployed site [here.]()
+View deployed site [here.](https://queenisabaer.github.io/letter-match/)
 
 Letter Match is a game for kindergarten children. It's main goal is to 
 
-![Responsive Mockup](documentation/readme)
+![Responsive Mockup](documentation/readme/am-i-responsive.png)
 
 ## Table of contents
 
@@ -47,7 +47,7 @@ Goals for:
 ### Wireframes
 
 <details>
-<summary>Page bevore game is started</summary>
+<summary>Page before game is started</summary>
 <br>
 
 ![Mobile wireframe](documentation/wireframes)
@@ -56,7 +56,7 @@ Goals for:
 </details>
 
 <details>
-<summary> about-us.html </summary>
+<summary>Game</summary>
 <br>
 
 ![Mobile wireframe](documentation/wireframes)

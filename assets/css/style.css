@@ -180,14 +180,11 @@ h2 {
     color: #05A550;;
 }
 
-#letterMatch > span:active {
-    background-color: rgba(247, 225, 29, 0.5); /* UX: to see which letter was chosen*/
-}
-
-/* When lettercard inside the letter row is clicked, apply a 3 seconds transition to its size */
+/* When lettercard inside the letter row is clicked, apply a 3 seconds transition to its size and background color */
 #letterMatch > span:active {
     transform: scale(0.97);
     transition: transform .3s;
+    background-color: rgba(247, 225, 29, 0.5); /* UX: to see which letter was chosen*/
 }
 
 /* Footer */

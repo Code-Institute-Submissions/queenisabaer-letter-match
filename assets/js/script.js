@@ -58,6 +58,7 @@ function startGame () {
     game.classList.remove("hidden"); //display the game area
     letterInput();
     timer();
+    closeModal(); //Close the modal, if its still open.
 }
 
 function nameInput () {
@@ -94,7 +95,7 @@ function getLetters (){
             letters.push(letter);
         }
     }
-    return letters
+    return letters;
 }
 
 /** Create random letters for the getLetters function */
@@ -120,6 +121,7 @@ function letterInput () {
   document.getElementById("letterThree").innerText = letters[2];
   document.getElementById("letterFour").innerText = letters[3];
   document.getElementById("letterFive").innerText = letters[4];
+  document.getElementById("letterZero").style.backgroundColor = "rgba(145, 213, 234, 0.5)";
 }
 
 /** Get current score from the DOM and increment it by 1 */
@@ -143,9 +145,9 @@ function correctAnswer(clickedLetter) {
     var wrong = document.getElementById("wrong");
 
     //Check if the clicked letter matches the letter in the rhyme
-    let questionLetter = document.getElementById("letterZero").textContent;
+    let questionLetter = document.getElementById("letterZero");
 
-    if (clickedLetter === questionLetter) { 
+    if (clickedLetter === questionLetter.textContent) { 
         //if the answer was correct, display the well done box for 1.5 seconds, 
         //increase score by one and shuffle the letters again
         correct.classList.remove("hidden");
@@ -159,9 +161,12 @@ function correctAnswer(clickedLetter) {
         //if the answer was wrong, 
         //diplay wrong answer box for 1.5 seconds and shuffle the letters again
         wrong.classList.remove("hidden");
+        questionLetter.style.backgroundColor = "red";
         setTimeout(function() {
             wrong.classList.add("hidden");
+            questionLetter.style.backgroundColor = "rgba(145, 213, 234, 0.5)"
             }, 1500);
+            
     }
 }
 
