@@ -175,7 +175,7 @@ function checkAnswer (clickedLetterID){
 /** Starts the games countdown as soon as button to start the game is clicked */
 function timer (){
     //Used the instruction by James McDowell on Stack Overflow
-    let timeleft = 5;
+    let timeleft = 45;
     let countdownTimer = setInterval(function(){
         if(timeleft <= 0){
             clearInterval(countdownTimer);
@@ -209,8 +209,8 @@ function restartGame () {
         congratulations.innerText = "Amazing, you're working hard on this."
     } else if (score.innerText <= 25) {
         congratulations.innerText = "Fantastic work. You make it look easy."
-    } else if (score.innerText <= 35) {
-        congratulations.innerText = "Excellent job. Be proud of you!"
+    } else if (score.innerText <= 30) {
+        congratulations.innerText = "Excellent job. Be proud of yourself!"
     } else {
         congratulations.innerText = "Great job"
     }
