@@ -212,7 +212,7 @@ function restartGame () {
     } else if (score.innerText <= 30) {
         congratulations.innerText = "Excellent job. Be proud of yourself!"
     } else {
-        congratulations.innerText = "Great job"
+        congratulations.innerText = "Incredible! You've just mastered that."
     }
 
 
