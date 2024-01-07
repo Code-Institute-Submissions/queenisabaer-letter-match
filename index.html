@@ -1,107 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Letter match is a fun game for preschoolers who want to learn the alphabet" />
-    <meta name="keywords" content="game, letters, alphabet, kindergarten, preschool, children, fun" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Letter match is a fun game for preschoolers who want to learn the alphabet"
+    />
+    <meta
+      name="keywords"
+      content="game, letters, alphabet, kindergarten, preschool, children, fun"
+    />
     <meta name="author" content="Dajana Isbaner" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Letter Match</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="gameBody">
-        <!-- Heading with h1 as logo for letter match -->
-        <header class="heading">
-            <h1>Letter Match</h1>
-        </header>
-        <main>
-            <!-- Instructions modal -->
-            <section>
-                <!-- button to open the modal -->
-                <button type="button" class="btn-rules" id="rules">Instructions</button>
-                <!-- modal content -->
-                <div class="modal-content hidden">
-                    <button type="button" class="btn-close" id="closeBtn"><i class="fa-regular fa-circle-xmark"></i></button>
-                    <ol>
-                        <li>Enter your name in the blue input field.</li>
-                        <li>Click the 'Start Game' button.</li>
-                        <li>In the rhyme you see a blue card with a large purple letter from the alphabet.</li>
-                        <li>Find the letter that matches this letter in the letter row.</li>
-                        <li>In 45 seconds, try to find as many matches as possible.</li>
-                        <li>You can find the amount of your correct answers in the bottom of the game.</li>
-                    </ol>
-                </div>
-            </section>
-            <!-- First panel -->
-            <div id="start">
-                <div class="name-area">
-                    <h2>What's your name?<sup>*</sup></h2> 
-                    <label for="name-input"></label>
-                    <input type="text" id="name-input" name="name-input" maxlength="15">
-                    <p class="supText"><sup>*</sup>max. 15 characters</p>
-                    <div class="text" id="nameCheck"></div>             
-                </div>
-                <div class="start-game">
-                    <button class="btn-start" aria-label="start the game"><i class="fa-regular fa-circle-play"></i></button>
-                    <h2>Start Game</h2>
-                </div>
+      <!-- Heading with h1 as logo for letter match -->
+      <header class="heading">
+        <h1>Letter Match</h1>
+      </header>
+      <main>
+        <!-- Instructions modal -->
+        <section>
+          <!-- button to open the modal -->
+          <button type="button" class="btn-rules" id="rules">
+            Instructions
+          </button>
+          <!-- modal content -->
+          <div class="modal-content hidden">
+            <button type="button" class="btn-close" id="closeBtn">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+            <ol>
+              <li>Enter your name in the blue input field.</li>
+              <li>Click the 'Start Game' button.</li>
+              <li>
+                In the rhyme you see a blue card with a large purple letter from
+                the alphabet.
+              </li>
+              <li>
+                Find the letter that matches this letter in the letter row.
+              </li>
+              <li>In 45 seconds, try to find as many matches as possible.</li>
+              <li>
+                You can find the amount of your correct answers in the bottom of
+                the game.
+              </li>
+            </ol>
+          </div>
+        </section>
+        <!-- First panel -->
+        <div id="start">
+          <div class="name-area">
+            <h2>What's your name?<sup>*</sup></h2>
+            <label for="name-input"></label>
+            <input
+              type="text"
+              id="name-input"
+              name="name-input"
+              maxlength="15"
+            />
+            <p class="supText"><sup>*</sup>max. 15 characters</p>
+            <div class="text" id="nameCheck"></div>
+          </div>
+          <div class="start-game">
+            <button class="btn-start" aria-label="start the game">
+              <i class="fa-regular fa-circle-play"></i>
+            </button>
+            <h2>Start Game</h2>
+          </div>
+        </div>
+        <!-- Game panel -->
+        <div id="game" class="hidden">
+          <p class="text">Letters, letters, what will it be?</p>
+          <!-- Question area -->
+          <p class="text">
+            I'm looking for <span id="letterZero" class="letterCard"></span>
+          </p>
+          <p class="text">
+            <span id="childName">name</span>, where is it to see?
+          </p>
+          <p id="letterMatch">
+            <span id="letterOne" class="letterCard"></span>
+            <span id="letterTwo" class="letterCard"></span>
+            <span id="letterThree" class="letterCard"></span>
+            <span id="letterFour" class="letterCard"></span>
+            <span id="letterFive" class="letterCard"></span>
+          </p>
+          <!-- Well done box -->
+          <p id="correct" class="modal-content hidden">Well done! &#128077;</p>
+          <!-- Wrong answer box -->
+          <p id="wrong" class="modal-content hidden">
+            Sorry, that was not the right answer. &#128547;
+          </p>
+          <!-- Score area -->
+          <div class="gameBottom">
+            <div id="correctAnswers">
+              <p class="text">Correct answers: <span id="answers">0</span></p>
             </div>
-            <!-- Game panel -->
-            <div id="game" class="hidden">
-                <p class="text">Letters, letters, what will it be?</p>
-                <!-- Question area -->
-                <p class="text">I'm looking for <span id="letterZero" class="letterCard">I</span></p>
-                <p class="text"><span id="childName">name</span>, where is it to see?</p>
-                <p id="letterMatch"><span id="letterOne" class="letterCard">A</span> <span id="letterTwo" class="letterCard">W</span> <span id="letterThree" class="letterCard">Z</span> <span id="letterFour" class="letterCard">G</span> <span id="letterFive" class="letterCard">M</span></p>
-                <!-- Well done box -->
-                <p id="correct" class="modal-content hidden">Well done! &#128077;</p>
-                <!-- Wrong answer box -->
-                <p id="wrong" class="modal-content hidden">Sorry, that was not the right answer. &#128547;</p>
-                <!-- Score area -->
-                <div class="gameBottom">
-                    <div id="correctAnswers">
-                        <p class="text">Correct answers: <span id="answers">0</span></p>
-                    </div>
-                    <!-- Timer -->
-                    <div id="timer">
-                        <p class="text"><i class="fa-solid fa-hourglass-half"></i> <span id="time">Go!</span></p>
-                    </div>
-                </div>
+            <!-- Timer -->
+            <div id="timer">
+              <p class="text">
+                <i class="fa-solid fa-hourglass-half"></i>
+                <span id="time">Go!</span>
+              </p>
             </div>
-            <!-- Restart game panel -->
-            <div id="restart" class="hidden">
-                <h2>Time's up</h2>
-                <p class="text">Great job!</p>
-                <p class="text">Your score: <span id="score"></span></p>
-                <p class="text"> Wanna play again?</p>
-                <div class="restart-game">
-                    <button class="btn-restart" aria-label="restart the game"><i class="fa-regular fa-circle-play"></i></button>
-                    <h2>Start Game</h2>
-                </div>
-            </div>
-        </main>
-        <!-- Footer -->
-        <footer>
-            <div class="btm-container">
-                <div class="britishcouncil"><a href="https://learnenglishkids.britishcouncil.org/category/topics/alphabet" target="_blank" rel="noopener" aria-label="Learn the alphabet on the British Council website(opens in a new tab)">British Council - Learn the alphabet</a></div>
-                <!-- Social Media -->
-                <div>
-                    <ul class="scl-net">
-                        <li>
-                            <a href="https://www.youtube.com/@BritishCouncilLEKids" target="_blank" rel="noopener" aria-label="Visit the YouTube page of the British Council Institute (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/britishcouncilenglishonline/" target="_blank" rel="noopener" aria-label="Visit the instagram page of the British Council Institute (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
+          </div>
+        </div>
+        <!-- Restart game panel -->
+        <div id="restart" class="hidden">
+          <h2>Time's up</h2>
+          <p class="text">Great job!</p>
+          <p class="text">Your score: <span id="score"></span></p>
+          <p class="text">Wanna play again?</p>
+          <div class="restart-game">
+            <button class="btn-restart" aria-label="restart the game">
+              <i class="fa-regular fa-circle-play"></i>
+            </button>
+            <h2>Start Game</h2>
+          </div>
+        </div>
+      </main>
+      <!-- Footer -->
+      <footer>
+        <div class="btm-container">
+          <div class="britishcouncil">
+            <a
+              href="https://learnenglishkids.britishcouncil.org/category/topics/alphabet"
+              target="_blank"
+              rel="noopener"
+              aria-label="Learn the alphabet on the British Council website(opens in a new tab)"
+              >British Council - Learn the alphabet</a
+            >
+          </div>
+          <!-- Social Media -->
+          <div>
+            <ul class="scl-net">
+              <li>
+                <a
+                  href="https://www.youtube.com/@BritishCouncilLEKids"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Visit the YouTube page of the British Council Institute (opens in a new tab)"
+                  ><i class="fa-brands fa-youtube"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/britishcouncilenglishonline/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Visit the instagram page of the British Council Institute (opens in a new tab)"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="assets/js/script.js"></script>
-     
+
     <!-- Font awesome kit-->
-     <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://kit.fontawesome.com/3b20d96fa9.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
