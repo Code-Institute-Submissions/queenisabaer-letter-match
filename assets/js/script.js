@@ -162,7 +162,6 @@ function correctAnswer(clickedLetter) {
         setTimeout(function() {
             wrong.classList.add("hidden");
             }, 1500);
-        letterRow();
     }
 }
 
@@ -176,7 +175,7 @@ function checkAnswer (clickedLetterID){
 /** Starts the games countdown as soon as button to start the game is clicked */
 function timer (){
     //Used the instruction by James McDowell on Stack Overflow
-    let timeleft = 45;
+    let timeleft = 5;
     let countdownTimer = setInterval(function(){
         if(timeleft <= 0){
             clearInterval(countdownTimer);
@@ -197,8 +196,25 @@ function restartGame () {
     restart.classList.remove("hidden"); 
     endgame.classList.add("hidden"); 
 
-    // Add final score to restart game panel
-    document.getElementById("score").innerText = document.getElementById("answers").innerText;
+    // Add final score to restart game panel and depending on the score show congratulations
+    let score = document.getElementById("score");
+    let congratulations = document.getElementById("congrats")
+    score.innerText = document.getElementById("answers").innerText;
+
+    if (score.innerText <= 5) {
+        congratulations.innerText = "Great start, try again to improve your skills."
+    } else if (score.innerText <= 10) {
+        congratulations.innerText = "Well done, you're on a good way."
+    } else if (score.innerText <= 15) {
+        congratulations.innerText = "Amazing, you're working hard on this."
+    } else if (score.innerText <= 25) {
+        congratulations.innerText = "Fantastic work. You make it look easy."
+    } else if (score.innerText <= 35) {
+        congratulations.innerText = "Excellent job. Be proud of you!"
+    } else {
+        congratulations.innerText = "Great job"
+    }
+
 
     //restart the game by clicking the button
     document.querySelector(".btn-restart").addEventListener("click", e => {
