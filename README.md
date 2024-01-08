@@ -121,7 +121,7 @@ All the pages were created with a mobile first approach and are made responsive.
 - I would like to create different levels of difficulty for the game. For example, that you can choose whether you want to match only uppercase letters or whether you compare between uppercase and lowercase letters. 
 - I would like to allow a selection where you can set the time (e.g. 20/30/45/60 seconds).
 - Add a highscore. 
-- Adjust the background color of the lettercards according to the correct or wrong answer.
+- Adjust the background color of the lettercards in the letter row according to the correct or wrong answer.
 
 ## Technologies Used
 
@@ -149,14 +149,17 @@ All the pages were created with a mobile first approach and are made responsive.
 - **[HTML Validator](https://validator.w3.org/)**
 
   - result for index.html<br>
-    ![HTML results index with errors]()
+  In the first attempt I was shown a warning regarding the section where my instruction modal is located.
+    ![HTML result index with error](documentation/readme/html-validator-index-error-letter-match.png)<br>
+   After changing this section into a div no more warnings or errors were detected.     
+    ![HTML final result](documentation/readme/html-validator-letter-match.png)
    
 
 I also checked all pages in the validator via text-input, and likewise no errors were detected in this way. All I got was an information to avoid trailing slashes in void elements.
 
 - **[CSS Validator](https://jigsaw.w3.org/css-validator/)**
    - result for styles.css <br>
-     ![CSS result]()
+     ![CSS result](documentation/readme/css-validator-result.png)
      The warning is due to import of the Google fonts.
 
 2. **Lighthouse Test** <br>
