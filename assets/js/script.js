@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 //Wait for the DOM to finish loading and add event listeners to button elements
 document.addEventListener("DOMContentLoaded", function(){
     //Event listener for the instructions button
@@ -14,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function(){
     if (event.key === "Enter") {  
         nameInput();     // if enter key was pressed, the nameInput function runs
         }
-    })
-})
+    });
+});
 
 // Variables for modal and game start
 const modalContent = document.querySelector(".modal-content"); 
@@ -151,7 +153,7 @@ function correctAnswer(clickedLetter) {
         //set backgroundcolor of lettercard to green 
         //increase score by one and shuffle the letters again
         correct.classList.remove("hidden");
-        questionLetter.style.backgroundColor = "rgba(5,165,80, 0.5)"
+        questionLetter.style.backgroundColor = "rgba(5,165,80, 0.5)";
         //to add the class after 750 milliseconds I used the instruction by Caren Bautista from ITSourceCode.com
         setTimeout(function() {
             correct.classList.add("hidden");
@@ -205,23 +207,22 @@ function restartGame () {
 
     // Add final score to restart game panel and depending on the score show congratulations
     let score = document.getElementById("score");
-    let congratulations = document.getElementById("congrats")
+    let congratulations = document.getElementById("congrats");
     score.innerText = document.getElementById("answers").innerText;
 
     if (score.innerText < 5) {
-        congratulations.innerText = "Great start, try again to improve your skills."
+        congratulations.innerText = "Great start, try again to improve your skills.";
     } else if (score.innerText < 10) {
-        congratulations.innerText = "Well done, you're on a good way."
+        congratulations.innerText = "Well done, you're on a good way.";
     } else if (score.innerText < 15) {
-        congratulations.innerText = "Amazing, you're working hard on this."
+        congratulations.innerText = "Amazing, you're working hard on this.";
     } else if (score.innerText < 25) {
-        congratulations.innerText = "Fantastic work. You make it look easy."
+        congratulations.innerText = "Fantastic work. You make it look easy.";
     } else if (score.innerText < 30) {
-        congratulations.innerText = "Excellent job. Be proud of yourself!"
+        congratulations.innerText = "Excellent job. Be proud of yourself!";
     } else {
-        congratulations.innerText = "Incredible! You've just mastered that."
+        congratulations.innerText = "Incredible! You've just mastered that.";
     }
-
 
     //restart the game by clicking the button
     document.querySelector(".btn-restart").addEventListener("click", e => {
