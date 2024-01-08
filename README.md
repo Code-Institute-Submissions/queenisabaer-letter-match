@@ -132,7 +132,7 @@ The footer stays on the bottom of the game body and features clickable social me
 <summary> Instructions </summary>
 <br>
 
-The instructions modal opens, when you click the instructions button. <br>
+The instructions modal opens and closes, when you click the instructions button. You can also close the modal with the escape key or by clicking on the x on the right corner.<br>
 ![Footer mobile version](documentation/readme)<br>
 ![Footer desktop version](documentation/readme)<br>
 
@@ -142,7 +142,7 @@ The instructions modal opens, when you click the instructions button. <br>
 <summary> Name input </summary>
 <br>
 
-In the welcome/start game panel or when you load the page, you will be asked for your name. If you enter a name with numbers in it, the game doesn't start and a warning is shown. I decided not to restrict the use of special characters to include children with extraordinary names, such as the children of Elon Musk. However, it is possible not to specify a name at all, then a placeholder (Abcedarian) is displayed as the name. You can submit your name input by clicking on the start game butoon or with the enter key. This will start the game as well.<br>
+In the welcome/start game panel or when you load the page, you will be asked for your name. If you enter a name with numbers in it, the game doesn't start and a warning is shown. I decided not to limit the use of special characters, so as not to exclude children with extraordinary names, like the children of Elon Musk. However, it is possible not to specify a name at all, then a placeholder (Abcedarian) is displayed as name. You can submit your name input by clicking on the start game button or with the enter key. This will start the game as well.<br>
 ![Name input field](documentation/readme)<br>
 ![Name input with numbers](documentation/readme)<br>
 ![Name inside the game](documentation/readme)<br>
@@ -219,10 +219,13 @@ To ensure the pages are responsive, I used the Google Chrome developer tools.
 | **Test** | **Test Description** | **Expected Outcome** | **Result**|
 |:---|:---|:---|:---|
 | Header - Logo | Click on the logo to return welcome/name panel | Clicking on the logo, even in the game, will return you to the main page | Pass |
-| Footer - arrangement | On tablets or bigger screen the text for the british council and the social media icons should appear next to each other | Enlarge the view of the page to at least 768px to show the footer in one line | Pass |
+| Footer - arrangement | Enlarge the view of the page to at least 768px to show the footer in one line | On tablets or bigger screen the footer should be presented in one line | Pass |
 | Footer - British Council | Click on the British Council text and a new tab with the website opens | After clicking on the text for the british council, a new tab to the website of the British Council should open | Pass|
 | Footer - Social Media icons | Click on the logo of Facebook or Instagram and a new tab with Facebook page or Instagram page opens | After clicking on the logo of Facebook it should open a new tab with the Facebook page, and after clicking on the Instagram logo, Instagram should open in a new tab as well | Pass |
-| Start panel | The name input field should be in focus | After the DOM is loaded the name input field should be in focus(desktop: ) | Pass |
+| Start panel - name input | Name input field should be in focus | After the DOM is loaded the name input field should be in focus and ready to use(mouse pointer inside the field) | Pass |
+| Start panel - name input | Enter a name with numbers | If a name is entered with a number, an error message should be displayed and the game should not start. | Pass |
+| Start panel - name input | Enter a valid name in the name input field and click the start game button or press the Enter key. | If a valid name was entered and the start game button is clicked or the Enter key is pressed, the game should start. | Pass |
+| Start panel - name input | Don’t type a name in the name field or just use a space as name and click the start game button or press the Enter key. | If no name was entered or only spaces and the start game button is clicked or the Enter key is pressed, the game should start and in the name area of the game a placeholder("Abeccderian") should be visible  | Pass |
 
 
 4. **Browser Compatibility**<br>

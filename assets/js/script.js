@@ -167,7 +167,7 @@ function correctAnswer(clickedLetter) {
   //Check if the clicked letter matches the letter in the rhyme
   let questionLetter = document.getElementById("letterZero");
   if (clickedLetter === questionLetter.textContent) {
-    //if the answer was correct, display the well done box for 1 seconds,
+    //if the answer was correct, display the well done box for 750 milliseconds,
     //set backgroundcolor of lettercard to green
     //increase score by one and shuffle the letters again
     correct.classList.remove("hidden");

@@ -151,6 +151,10 @@ a {
     cursor: pointer;
 }
 
+.btn-start:active, .btn-restart:active {
+    color: #FA558A;
+}
+
 /* Game area */
 .gameBottom {
     display: flex;
@@ -254,5 +258,9 @@ a {
 @media screen and (min-width: 1024px) {
     #letterMatch > span:hover {
         background-color: rgba(247, 225, 29, 0.5); /* UX: to see which letter was chosen*/
+    }
+    
+    .btn-start:hover, .btn-restart:hover {
+        color: #FA558A;
     }
 }
