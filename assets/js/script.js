@@ -216,12 +216,14 @@ function restartGame () {
         congratulations.innerText = "Well done, you're on a good way.";
     } else if (score.innerText < 15) {
         congratulations.innerText = "Amazing, you're working hard on this.";
-    } else if (score.innerText < 25) {
+    } else if (score.innerText < 20) {
         congratulations.innerText = "Fantastic work. You make it look easy.";
-    } else if (score.innerText < 30) {
+    } else if (score.innerText < 25) {
         congratulations.innerText = "Excellent job. Be proud of yourself!";
-    } else {
+    } else if (score.innerText < 30) {
         congratulations.innerText = "Incredible! You've just mastered that.";
+    } else {
+        congratulations.innerText = "Great job";
     }
 
     //restart the game by clicking the button
