@@ -157,7 +157,7 @@ function correctAnswer(clickedLetter) {
             correct.classList.add("hidden");
             questionLetter.style.backgroundColor = "rgba(145, 213, 234, 0.5)";
             letterInput();
-            }, 1000);
+            }, 750);
         incrementScore();
     } else { 
         //if the answer was wrong, 
@@ -208,15 +208,15 @@ function restartGame () {
     let congratulations = document.getElementById("congrats")
     score.innerText = document.getElementById("answers").innerText;
 
-    if (score.innerText <= 5) {
+    if (score.innerText < 5) {
         congratulations.innerText = "Great start, try again to improve your skills."
-    } else if (score.innerText <= 10) {
+    } else if (score.innerText < 10) {
         congratulations.innerText = "Well done, you're on a good way."
-    } else if (score.innerText <= 15) {
+    } else if (score.innerText < 15) {
         congratulations.innerText = "Amazing, you're working hard on this."
-    } else if (score.innerText <= 25) {
+    } else if (score.innerText < 25) {
         congratulations.innerText = "Fantastic work. You make it look easy."
-    } else if (score.innerText <= 30) {
+    } else if (score.innerText < 30) {
         congratulations.innerText = "Excellent job. Be proud of yourself!"
     } else {
         congratulations.innerText = "Incredible! You've just mastered that."

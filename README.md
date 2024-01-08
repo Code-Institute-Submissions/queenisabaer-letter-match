@@ -76,7 +76,7 @@ Goals for:
 <details>
 <summary> Correct answer </summary>
 <br>
-Unfortunately, due to lack of time, I did not manage to set the background colors correctly for wrong or correct answers.<br>
+Unfortunately, due to lack of time, I did not manage to set the background colors for the letter row correctly for wrong or correct answers.<br>
 
 ![Mobile wireframe](documentation/wireframes/letter-match-game-mobil-correct.png)
 ![Desktop wireframe](documentation/wireframes/letter-match-game-desktop-correct.png)
@@ -86,7 +86,7 @@ Unfortunately, due to lack of time, I did not manage to set the background color
 <details>
 <summary> Wrong answer </summary>
 <br>
-During coding I decided to give the child another try to find the correct answer, so that he/she/they could improve his/her/their skill. Therefore, displaying the correct letter was no longer necessary.
+During coding I decided to give the child another try to find the correct answer, so that he/she/they could improve his/her/their skill. Therefore, displaying the correct letter was no longer necessary.<br>
 
 ![Mobile wireframe](documentation/wireframes/letter-match-game-mobil-wrong.png)
 ![Desktop wireframe](documentation/wireframes/letter-match-game-mobil-wrong.png)
