@@ -154,13 +154,16 @@ All the pages were created with a mobile first approach and are made responsive.
    After changing this section into a div no more warnings or errors were detected.     
     ![HTML final result](documentation/readme/html-validator-letter-match.png)
    
-
-I also checked all pages in the validator via text-input, and likewise no errors were detected in this way. All I got was an information to avoid trailing slashes in void elements.
+I also checked the page in the validator via text-input, and likewise no errors were detected in this way. All I got was an information to avoid trailing slashes in void elements.
 
 - **[CSS Validator](https://jigsaw.w3.org/css-validator/)**
    - result for styles.css <br>
      ![CSS result](documentation/readme/css-validator-result.png)
      The warning is due to import of the Google fonts.
+- **[JSHint]()**
+  - result for sript.js <br>
+  On the first attempt there were some warnings about missing semicolons. After adding this to my javascript, no further warnings or errors were detected.
+    ![JSHint result](documentation/readme/jshint-letter-match.png)
 
 2. **Lighthouse Test** <br>
    To measure the website against performance, accessibility, SEO and best practice I used [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de).<br>
