@@ -4,7 +4,7 @@ _Javascript Essentials Project Portfolio - Code Institute_
 
 View deployed site [here.](https://queenisabaer.github.io/letter-match/)
 
-Letter Match is a game for kindergarten pr preschool children. It's main goal is to 
+Letter Match is a game for kindergarten and preschool children. Its main goal is to help children to learn the alphabet and get to know the capital letters better. The game was inspired by an Instagram post by [create25printables](https://www.instagram.com/p/Cv2fjIxuwVR/?igshid=MTc4MmM1YmI2Ng%3D%3D&epik=dj0yJnU9XzBHMi1OY2sya2JpMS03RV9JVENYbWdhS0FzcldUOTgmcD0wJm49RGJFR2Q1d2Vxc0ZtLU1fdkJQa21SQSZ0PUFBQUFBR1djR0ZV). 
 
 ![Responsive Mockup](documentation/readme/am-i-responsive.png)
 
@@ -157,6 +157,7 @@ In the welcome/start game panel or when you load the page, you will be asked for
 - I would like to allow a selection where you can set the time (e.g. 20/30/45/60 seconds).
 - Add a highscore. 
 - Adjust the background color of the lettercards in the letter row according to the correct or wrong answer.
+- Add audio content to the instruction modal (Instructions to be read out loud). 
 
 ## Technologies Used
 
