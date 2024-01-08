@@ -4,7 +4,7 @@ _Javascript Essentials Project Portfolio - Code Institute_
 
 View deployed site [here.](https://queenisabaer.github.io/letter-match/)
 
-Letter Match is a game for kindergarten and preschool children. Its main goal is to help children to learn the alphabet and get to know the capital letters better. The game was inspired by an Instagram post by [create25printables](https://www.instagram.com/p/Cv2fjIxuwVR/?igshid=MTc4MmM1YmI2Ng%3D%3D&epik=dj0yJnU9XzBHMi1OY2sya2JpMS03RV9JVENYbWdhS0FzcldUOTgmcD0wJm49RGJFR2Q1d2Vxc0ZtLU1fdkJQa21SQSZ0PUFBQUFBR1djR0ZV). 
+Letter Match is a game for kindergarten and preschool children. Its main goal is to help children to learn the alphabet and/or get to know the capital letters better. The game was inspired by an Instagram post by [create25printables](https://www.instagram.com/p/Cv2fjIxuwVR/?igshid=MTc4MmM1YmI2Ng%3D%3D&epik=dj0yJnU9XzBHMi1OY2sya2JpMS03RV9JVENYbWdhS0FzcldUOTgmcD0wJm49RGJFR2Q1d2Vxc0ZtLU1fdkJQa21SQSZ0PUFBQUFBR1djR0ZV). For older children it is a fun game to get as many points as possible within the given time. 
 
 ![Responsive Mockup](documentation/readme/am-i-responsive.png)
 
@@ -24,13 +24,13 @@ Letter Match is a game for kindergarten and preschool children. Its main goal is
 
 Goals for:
 
-- **Children learning the alphabet: Preschool or Kindergarten**
+- **Children learning the alphabet: Preschool or Kindergarten** <br>
 Children who are just learning the alphabet should be able to grasp the game and recognize the letter matches. Especially the start of the game should be accompanied by parents to explain the rules and possibly help with typing the name. As a future function, an audio file should be included, which reads the rules. If no name is entered and the start button was clicked directly, the game should still be running and a green placeholder name should be displayed. The start button should be easy to recognize.  The letters to look for should be easily recognizable. In order to grant a positive experience, points are not deducted and only points resulting from correct answers are counted. 
 
-- **Children knowing the alphabet: Class 1 or higher**
+- **Children knowing the alphabet: Class 1 or higher** <br>
 Children who already know the alphabet or can even read and write should also be able to easily understand the game and recognize the letter matches. Entering the name should be easy for you to understand. Correct answers are encouraged by congratulations, wrong answers give the opportunity to try again. Nevertheless, it is also about positive reinforcement, so no negative points are awarded in the game, if a wrong answer was clicked. Again, a positive gaming experience is in the foreground.
 
-- **Older children or adults**
+- **Older children or adults** <br>
 Especially older children or adults are animated by the countdown to find as many matches as possible. The congratulatory text should therefore also adapt in certain steps, the higher the score is.  
 
 ## Design
@@ -152,7 +152,7 @@ The letters to be matched rearrange themselves, after a correct answer was given
 ![Game panel](documentation/readme/letter-match-game-start-go.png)<br>
 When the correct letter is clicked, a "Well done" message appears for a short moment and the letter in the rhyme turns green. Then the letter cards are mixed again. <br>
 ![Game panel](documentation/readme/letter-match-correct-answer.png)<br>
-If the wrong letter has been clicked in the sequence, a "Sorry...try again" message appears for a short moment and the letter in the rhyme turns red. The letter cards are not reshuffled so the child has the opportunity to correct his mistake, gaining some more experience.<br>
+If the wrong letter has been clicked in the sequence, the "Sorry...try again" message appears for a short moment and the letter in the rhyme turns red. The letter cards are not reshuffled so the child has the opportunity to correct his mistake, gaining some more experience.<br>
 ![Game panel](documentation/readme/letter-match-wrong-answer.png)<br>
 
 </details>
@@ -175,8 +175,8 @@ At the end of the timer, the restart game panel is displayed, which contains the
 ![Congrats up to 19](documentation/readme/letter-match-congrats-excellent.png)<br>
 6. Congratulations text for a score up or equal to 25<br>
 ![Congrats up to 19](documentation/readme/letter-match-incredible.png)<br>
-Many different congratulatory texts were chosen to achieve a consistently positive reinforcement for the child. In addition, it can be rediscovered where there is a new text. 
-The child then has the option to restart the game, the score is reset to zero and the timer starts again. However, the child’s name or placeholder will remain. 
+Many different congratulatory texts were chosen to achieve a consistently positive reinforcement for the child. In addition, it can be rediscovered where there is a new text. <br>
+The child then has the option to restart the game by clicking the start game button, the score is reset to zero and the timer starts again. However, the child’s name or placeholder will remain. 
 
 </details>
 <details>
@@ -195,7 +195,7 @@ The footer stays on the bottom of the game body and features clickable social me
 - I would like to allow a selection where you can set the time (e.g. 20/30/45/60 seconds).
 - Add a highscore. 
 - Adjust the background color of the lettercards in the letter row according to the correct or wrong answer.
-- Add audio content to the instruction modal (Instructions to be read out loud). 
+- Add audio content to the instruction modal (Instructions to be read out loud - espacially for younger children). 
 
 ## Technologies Used
 
@@ -321,7 +321,7 @@ After refreshing the settings site for this repository above the **"Build and de
 ### Content
 
 - The background image is from Magda Ehlers and was found on the [Pexels](https://www.pexels.com/de-de/foto/kunst-muster-textur-abstrakt-4116706/) website.
--  by [7ESL](https://7esl.com/well-done/)
+- To write the various congratulation texts, I was inspired by the listing of [7ESL](https://7esl.com/well-done/)
 
 ### Code
 
@@ -329,8 +329,8 @@ After refreshing the settings site for this repository above the **"Build and de
 - To center the instructions modal I used an explanation from [Stack Overflow](https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element).
 - To create the countdown I used the instruction by [James McDowell on Stack Overflow](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown)
 - I found a great explanation for setting the restart button in the [Treehouse Community](https://teamtreehouse.com/community/any-one-know-how-to-make-a-restart-button)
-- How to add and remove a class after a certain time, was found at [ITSourceCode.com] (https://itsourcecode.com/javascript-tutorial/how-to-add-and-remove-class-after-5-seconds-in-javascript/).
-- The functions to check whether the right or wrong letter is clicked have been inspired by [CodingNepal] (https://www.codingnepalweb.com/build-memory-card-game-html-javascript/) among others. 
+- How to add and remove a class after a certain time, was found at [ITSourceCode.com](https://itsourcecode.com/javascript-tutorial/how-to-add-and-remove-class-after-5-seconds-in-javascript/).
+- The functions to check whether the right or wrong letter is clicked have been inspired by [CodingNepal](https://www.codingnepalweb.com/build-memory-card-game-html-javascript/) among others. 
 - To understand more about the concepts of JavaScript I used the udemy course: [The complete 2023 Web Development Bootcamp by Dr. Angela Yu](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
 - The following websites were used as a source of knowledge: <br>
   - [Google](www.google.com)
@@ -343,8 +343,9 @@ After refreshing the settings site for this repository above the **"Build and de
 
 ### Media
 
-- Icons on the footer, the game and for links were taken from [Font Awesome](https://fontawesome.com/)
-- The fonts were imported from [Google Fonts](https://fonts.google.com/)
+- Icons on the footer, the game and for links were taken from [Font Awesome](https://fontawesome.com/).
+- The fonts were imported from [Google Fonts](https://fonts.google.com/).
+- The favicon was created on [Favicon.io](https://favicon.io/favicon-generator/).
 
 ### ReadMe
 
