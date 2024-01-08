@@ -146,12 +146,39 @@ In the welcome/start game panel or when you load the page, you will be asked for
 <summary> Game </summary>
 <br>
 
-The game itself consists of a short rhyme in which the child is asked to find the searched letter in a series of letters. The rhyme does not change during the game, only the letters are exchanged as soon as a correct answer is given. This is important for younger children to have a constant and focus on the letter cards. Within the pink rhyme, the entered name or placeholder appears in green. A different color for the name was chosen for the child to perceive this directly.<br>
-
+The game itself consists of a short rhyme in which the child is asked to find the searched letter in a series of letters. The rhyme does not change during the game, only the letters are exchanged as soon as a correct answer is given. This is important for younger children to have a constant and focus on the letter cards. Within the pink rhyme, the entered name or placeholder appears in green. A different color for the name was chosen for the child to perceive directly.<br>
 ![Name inside the game](documentation/readme/letter-match-name-game.png)<br>
+The letters to be matched rearrange themselves, after a correct answer was given so that it remains a challenge. In addition, a timer was set so that the game is limited. For a brief moment, a "GO!" is displayed in the timer to not lose a second of the 45 seconds and encourage the child. Only the correct answers are counted during the game to ensure a positive gaming experience for children. <br>
+![Game panel](documentation/readme/letter-match-game-start-go.png)<br>
+When the correct letter is clicked, a "Well done" message appears for a short moment and the letter in the rhyme turns green. Then the letter cards are mixed again. <br>
+![Game panel](documentation/readme/letter-match-correct-answer.png)<br>
+If the wrong letter has been clicked in the sequence, a "Sorry...try again" message appears for a short moment and the letter in the rhyme turns red. The letter cards are not reshuffled so the child has the opportunity to correct his mistake, gaining some more experience.<br>
+![Game panel](documentation/readme/letter-match-wrong-answer.png)<br>
 
 </details>
 
+<details>
+<summary> Restart game </summary>
+<br>
+
+At the end of the timer, the restart game panel is displayed, which contains the last score and different congratulations depending on the score level. If the score is zero, you will be asked whether the letters have been clicked and the child is encouraged to try again. <br>
+![Restart game panel](documentation/readme/letter-match-restart-game-zero.png)<br>
+1. Congratulations text for a score up to 4<br>
+![Congrats up to four](documentation/readme/letter-match-great-start.png)<br>
+2. Congratulations text for a score up to 9<br>
+![Congrats up to 9](documentation/readme/letter-match-congrats-well-done.png)<br>
+3. Congratulations text for a score up to 14<br>
+![Congrats up to 14](documentation/readme/letter-match-congrats-amazing.png)<br>
+4. Congratulations text for a score up to 19<br>
+![Congrats up to 19](documentation/readme/letter-match-fantastic.png)<br>
+5. Congratulations text for a score up to 24<br>
+![Congrats up to 19](documentation/readme/letter-match-congrats-excellent.png)<br>
+6. Congratulations text for a score up or equal to 25<br>
+![Congrats up to 19](documentation/readme/letter-match-incredible.png)<br>
+Many different congratulatory texts were chosen to achieve a consistently positive reinforcement for the child. In addition, it can be rediscovered where there is a new text. 
+The child then has the option to restart the game, the score is reset to zero and the timer starts again. However, the child’s name or placeholder will remain. 
+
+</details>
 <details>
 <summary> Footer </summary>
 <br>
@@ -223,7 +250,6 @@ I also checked the page in the validator via text-input, and likewise no errors 
    This is the result for desktop device:
    ![Lighthouse with warning for accessibility](documentation/readme/lighthouse-letter-match-desktop.png)
 
-
 3. **Manual testing** <br>
 To ensure the pages are responsive, I used the Google Chrome developer tools.
 
@@ -255,11 +281,14 @@ To ensure the pages are responsive, I used the Google Chrome developer tools.
 4. **Browser Compatibility**<br>
    The tests were conducted using the following browsers:
 
-- 
+- Google Chrome Version 120.0.6099.129
+- Safari on Mac Version 17.0 (17616.1.27.111.22, 17616)
+- Safari on iOS 17.1.2
+- Edge Version 120.0.2210.61
 
 5. **Bugs**
 
-- 
+- No bugs where found. 
 
 ## Deployment
 
