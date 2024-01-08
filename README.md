@@ -295,7 +295,7 @@ After refreshing the settings site for this repository above the **"Build and de
 
 ### Acknowledgments
 
-- I would like to thank my wonderful mentor Brian Macheria for his numerous tips and great assistance during the creation of this project. In particular, his guidance for the letter functions. 
+- I would like to thank my wonderful mentor Brian Macheria for his numerous tips and great assistance during the creation of this project. In particular, his guidance for the letter functions and the corresponding event listeners.
 - Furthermore I would like to thank Niclas Hugdahl who helped me on Slack to get the right twist for my name input function and setting the checkAnswer/correctAnswer function. 
 
 **This is for educational use.**

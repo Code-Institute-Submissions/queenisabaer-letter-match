@@ -8,6 +8,12 @@ document.addEventListener("DOMContentLoaded", function(){
     closeModalBtn.addEventListener("click", closeModal);
     //Event listener for the Start Game button so the nameInput function runs
     startGameBtn.addEventListener("click", nameInput);
+    //Event listener for the modal close with the escape key(for better UX)
+    document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !modalContent.classList.contains("hidden")) {
+      closeModal();
+    }
+  });
     //UX: set cursor in the name input as soon as page is loaded,
     document.getElementById("name-input").focus();
     //Add event listener to name input box, so when the key "enter" is pressed down, the startGame function runs (UX)
@@ -42,13 +48,6 @@ let openModal = function () {
 let closeModal = function () {
     modalContent.classList.add("hidden");
   };
-
-//Close the modal with the escape button(for better UX)
-document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && !modalContent.classList.contains("hidden")) {
-      closeModal();
-    }
-  });
 
 /** startGame function should hide the welcome panel,
  * display the game area and start the game 
@@ -135,16 +134,11 @@ function incrementScore() {
 }
 
 //Add eventlisteners for the letterCards
-let answerElements = document.querySelectorAll("#letterMatch > .letterCard");
-
-for (let answerElement of answerElements) {
-    answerElement.addEventListener(
-        "click",
-        function () {
-            checkAnswer(answerElement.id);
-        }
-    );
-}
+document.getElementById("letterOne").addEventListener("click", function() { checkAnswer("letterOne"); });
+document.getElementById("letterTwo").addEventListener("click", function() { checkAnswer("letterTwo"); });
+document.getElementById("letterThree").addEventListener("click", function() { checkAnswer("letterThree"); });
+document.getElementById("letterFour").addEventListener("click", function() { checkAnswer("letterFour"); });
+document.getElementById("letterFive").addEventListener("click", function() { checkAnswer("letterFive"); });
 
 /** Checks what the correct answer is based on which letter was clicked */
 function correctAnswer(clickedLetter) {
