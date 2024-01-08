@@ -119,21 +119,11 @@ In the game body, the logo is centered at the top. It works as a link to reset t
 ![Logo](documentation/readme/letter-match-logo-header.png)<br>
 
 <details>
-<summary> Footer </summary>
-<br>
-
-The footer stays on the bottom of the game body and features clickable social media icons and a link to the british council - learn the alphabet website. All links on the footer are opened in a new tab. On tablets or larger screens,the text and the social media icons should appear in one row.<br>
-![Footer mobile version](documentation/readme/letter-match-footer-mobile.png)<br>
-![Footer desktop version](documentation/readme/letter-match-footer-desktop.png)<br>
-
-</details>
-
-<details>
 <summary> Instructions </summary>
 <br>
 
 The instructions modal opens and closes, when you click the instructions button. You can also close the modal with the escape key or by clicking on the x on the right corner.<br>
-![Footer mobile version](documentation/readme)<br>
+![Footer mobile version](documentation/readme/letter-match-instructions.png)<br>
 ![Footer desktop version](documentation/readme)<br>
 
 </details>
@@ -149,7 +139,15 @@ In the welcome/start game panel or when you load the page, you will be asked for
 
 </details>
 
+<details>
+<summary> Footer </summary>
+<br>
 
+The footer stays on the bottom of the game body and features clickable social media icons and a link to the british council - learn the alphabet website. All links on the footer are opened in a new tab. On tablets or larger screens,the text and the social media icons should appear in one row.<br>
+![Footer mobile version](documentation/readme/letter-match-footer-mobile.png)<br>
+![Footer desktop version](documentation/readme/letter-match-footer-desktop.png)<br>
+
+</details>
 
 ### Features, which I would like to implement in the future
 

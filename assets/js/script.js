@@ -228,7 +228,10 @@ function restartGame() {
   let congratulations = document.getElementById("congrats");
   score.innerText = document.getElementById("answers").innerText;
 
-  if (score.innerText < 5) {
+  if (score.innerText == 0) {
+    congratulations.innerText =
+      "Did you click the letters in the row? Just try again!";
+  } else if (score.innerText < 5) {
     congratulations.innerText =
       "Great start, try again to improve your skills.";
   } else if (score.innerText < 10) {
@@ -242,7 +245,7 @@ function restartGame() {
   } else if (score.innerText < 30) {
     congratulations.innerText = "Incredible! You've just mastered that.";
   } else {
-    congratulations.innerText = "Great job";
+    congratulations.innerText = "Great job"; 
   }
 
   //restart the game by clicking the button
