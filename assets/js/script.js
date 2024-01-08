@@ -65,7 +65,7 @@ function startGame () {
 
 function nameInput () {
     //Get the childs name from the name input field in the first panel
-    let name = document.getElementById("name-input").value;
+    let name = document.getElementById("name-input").value.trim();
     let nameError = document.getElementById("nameCheck");
 
      // Check if the name contains numbers

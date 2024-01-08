@@ -114,7 +114,42 @@ During coding I decided to give the child another try to find the correct answer
 
 ### Existing Features
 
-All the pages were created with a mobile first approach and are made responsive. To ensure that the layout of the pages remains consistent even on very large screens, the text body has been given a maximum width and a margin on both sides.  
+All the pages were created with a mobile first approach and are made responsive. To ensure that the layout of the pages remains consistent even on very large screens, the game body has been given a maximum width and a margin on both sides.  
+In the game body, the logo is centered at the top. It works as a link to reset the game to the welcome screen.<br> 
+![Logo](documentation/readme/letter-match-logo-header.png)<br>
+
+<details>
+<summary> Footer </summary>
+<br>
+
+The footer stays on the bottom of the game body and features clickable social media icons and a link to the british council - learn the alphabet website. All links on the footer are opened in a new tab. On tablets or larger screens,the text and the social media icons should appear in one row.<br>
+![Footer mobile version](documentation/readme/letter-match-footer-mobile.png)<br>
+![Footer desktop version](documentation/readme/letter-match-footer-desktop.png)<br>
+
+</details>
+
+<details>
+<summary> Instructions </summary>
+<br>
+
+The instructions modal opens, when you click the instructions button. <br>
+![Footer mobile version](documentation/readme)<br>
+![Footer desktop version](documentation/readme)<br>
+
+</details>
+
+<details>
+<summary> Name input </summary>
+<br>
+
+In the welcome/start game panel or when you load the page, you will be asked for your name. If you enter a name with numbers in it, the game doesn't start and a warning is shown. I decided not to restrict the use of special characters to include children with extraordinary names, such as the children of Elon Musk. However, it is possible not to specify a name at all, then a placeholder (Abcedarian) is displayed as the name. You can submit your name input by clicking on the start game butoon or with the enter key. This will start the game as well.<br>
+![Name input field](documentation/readme)<br>
+![Name input with numbers](documentation/readme)<br>
+![Name inside the game](documentation/readme)<br>
+
+</details>
+
+
 
 ### Features, which I would like to implement in the future
 
@@ -182,6 +217,11 @@ To ensure the pages are responsive, I used the Google Chrome developer tools.
 
 | **Test** | **Test Description** | **Expected Outcome** | **Result**|
 |:---|:---|:---|:---|
+| Header - Logo | Click on the logo to return welcome/name panel | Clicking on the logo, even in the game, will return you to the main page | Pass |
+| Footer - arrangement | On tablets or bigger screen the text for the british council and the social media icons should appear next to each other | Enlarge the view of the page to at least 768px to show the footer in one line | Pass |
+| Footer - British Council | Click on the British Council text and a new tab with the website opens | After clicking on the text for the british council, a new tab to the website of the British Council should open | Pass|
+| Footer - Social Media icons | Click on the logo of Facebook or Instagram and a new tab with Facebook page or Instagram page opens | After clicking on the logo of Facebook it should open a new tab with the Facebook page, and after clicking on the Instagram logo, Instagram should open in a new tab as well | Pass |
+| Start panel | The name input field should be in focus | After the DOM is loaded the name input field should be in focus(desktop: ) | Pass |
 
 
 4. **Browser Compatibility**<br>
