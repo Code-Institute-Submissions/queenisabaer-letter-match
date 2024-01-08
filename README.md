@@ -4,7 +4,7 @@ _Javascript Essentials Project Portfolio - Code Institute_
 
 View deployed site [here.](https://queenisabaer.github.io/letter-match/)
 
-Letter Match is a game for kindergarten children. It's main goal is to 
+Letter Match is a game for kindergarten pr preschool children. It's main goal is to 
 
 ![Responsive Mockup](documentation/readme/am-i-responsive.png)
 
@@ -44,8 +44,8 @@ Goals for:
 
   ![Color pallette 1](documentation/readme/letter-match-coloors-1.png)
   ![Color palette 2](documentation/readme/letter-match-coloors-2.png)
-
 </details>
+
 - **Typography:**
   [Annie use your teleskope](https://fonts.google.com/specimen/Annie+Use+Your+Telescope) was selected for text content. It's a cute font that is easy to read by children and yet has a certain lightness. 
   [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed) is an easy-to-read, clear font that is simple to grasp, so it was used for the instructions. 
@@ -160,17 +160,21 @@ I also checked the page in the validator via text-input, and likewise no errors 
    - result for styles.css <br>
      ![CSS result](documentation/readme/css-validator-result.png)
      The warning is due to import of the Google fonts.
-- **[JSHint]()**
+- **[JSHint](https://jshint.com/)**
   - result for sript.js <br>
   On the first attempt there were some warnings about missing semicolons. After adding this to my javascript, no further warnings or errors were detected.
     ![JSHint result](documentation/readme/jshint-letter-match.png)
 
 2. **Lighthouse Test** <br>
    To measure the website against performance, accessibility, SEO and best practice I used [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de).<br>
-   
-- result for index.html:<br>
-  
-  
+   - result for index.html<br>
+   First, it gave a warning that the form element did not have the correct associated label. 
+   ![Lighthouse with warning for accessibility](documentation/readme/lighthouse-accessibility-letter-match.png)
+   After adjusting the label for the name input, I could increase the accessibility to 100.
+   ![Lighthouse with warning for accessibility](documentation/readme/lighthouse-letter-match.png)<br>
+   This is the result for desktop device:
+   ![Lighthouse with warning for accessibility](documentation/readme/lighthouse-letter-match-desktop.png)
+
 
 3. **Manual testing** <br>
 To ensure the pages are responsive, I used the Google Chrome developer tools.
