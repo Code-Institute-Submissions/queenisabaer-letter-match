@@ -97,8 +97,8 @@ During coding I decided to give the child another try to find the correct answer
 <summary> Game ending </summary>
 <br>
 
-![Mobile wireframe](documentation/wireframes)
-![Desktop wireframe](documentation/wireframes)
+![Mobile wireframe](documentation/wireframes/letter-match-end-mobile.png)
+![Desktop wireframe](documentation/wireframes/letter-match-end-desktop.png)
 
 </details>
 
@@ -108,10 +108,12 @@ During coding I decided to give the child another try to find the correct answer
 
 All the pages were created with a mobile first approach and are made responsive. To ensure that the layout of the pages remains consistent even on very large screens, the text body has been given a maximum width and a margin on both sides.  
 
-
 ### Features, which I would like to implement in the future
 
-- 
+- I would like to create different levels of difficulty for the game. For example, that you can choose whether you want to match only uppercase letters or whether you compare between uppercase and lowercase letters. 
+- I would like to allow a selection where you can set the time (e.g. 20/30/45/60 seconds).
+- Add a highscore. 
+- Adjust the background color of the lettercards according to the correct or wrong answer.
 
 ## Technologies Used
 
