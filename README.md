@@ -34,10 +34,18 @@ Goals for:
 ## Design
 
 - **Imagery:**
-  xxx
+  The background image was discovered when searching for a letter image, it perfectly fits the theme that letters need to be searched. In addition, it was very colorful and perfect to generate the colors for the game. 
 - **Colour Scheme:**
-  xxx<br>
-  ![Color palette](documentation/readme)
+  The colors were determined with the pipette function of the website coloors. In general, the colors are very cheerful and colorful, as it is a game for small children. <br>
+
+  <details>
+  <summary> Color palette </summary>
+  <br>
+
+  ![Color pallette 1](documentation/readme/letter-match-coloors-1.png)
+  ![Color palette 2](documentation/readme/letter-match-coloors-2.png)
+
+</details>
 - **Typography:**
   [Annie use your teleskope](https://fonts.google.com/specimen/Annie+Use+Your+Telescope) was selected for text content. It's a cute font that is easy to read by children and yet has a certain lightness. 
   [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed) is an easy-to-read, clear font that is simple to grasp, so it was used for the instructions. 
@@ -235,7 +243,7 @@ After refreshing the settings site for this repository above the **"Build and de
 
 ### Acknowledgments
 
-- I would like to thank my wonderful mentor Brian Macheria for his numerous tips and great assistance during the creation of this project.
+- I would like to thank my wonderful mentor Brian Macheria for his numerous tips and great assistance during the creation of this project. In particular, his guidance for the letter functions. 
 - Furthermore I would like to thank Niclas Hugdahl who helped me on Slack to get the right twist for my name input function and setting the checkAnswer/correctAnswer function. 
 
 **This is for educational use.**

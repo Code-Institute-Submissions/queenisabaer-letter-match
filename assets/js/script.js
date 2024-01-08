@@ -152,7 +152,7 @@ function correctAnswer(clickedLetter) {
         //increase score by one and shuffle the letters again
         correct.classList.remove("hidden");
         questionLetter.style.backgroundColor = "rgba(5,165,80, 0.5)"
-        //to add the class after 1 seconds I used the instruction by Caren Bautista from ITSourceCode.com
+        //to add the class after 750 milliseconds I used the instruction by Caren Bautista from ITSourceCode.com
         setTimeout(function() {
             correct.classList.add("hidden");
             questionLetter.style.backgroundColor = "rgba(145, 213, 234, 0.5)";

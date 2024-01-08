@@ -48,6 +48,10 @@ h2 {
     font-size: 175%;
 }
 
+a {
+    text-decoration: none;
+}
+
 .text {
     color: #FA558A;
     font-size: 125%;
@@ -189,7 +193,6 @@ h2 {
 
 /* Footer */
 .britishcouncil a {
-    text-decoration: none;
     color: #78278A;
     font-variant: small-caps;
     font-size: 140%;
