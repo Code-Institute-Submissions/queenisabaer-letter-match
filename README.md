@@ -24,19 +24,21 @@ Letter Match is a game for kindergarten and preschool children. Its main goal is
 
 Goals for:
 
-- **First time visitor:**
+- **Children learning the alphabet: Preschool or Kindergarten**
+Children who are just learning the alphabet should be able to grasp the game and recognize the letter matches. Especially the start of the game should be accompanied by parents to explain the rules and possibly help with typing the name. As a future function, an audio file should be included, which reads the rules. If no name is entered and the start button was clicked directly, the game should still be running and a green placeholder name should be displayed. The start button should be easy to recognize.  The letters to look for should be easily recognizable. In order to grant a positive experience, points are not deducted and only points resulting from correct answers are counted. 
 
-- **Returning visitor:**
+- **Children knowing the alphabet: Class 1 or higher**
+Children who already know the alphabet or can even read and write should also be able to easily understand the game and recognize the letter matches. Entering the name should be easy for you to understand. Correct answers are encouraged by congratulations, wrong answers give the opportunity to try again. Nevertheless, it is also about positive reinforcement, so no negative points are awarded in the game, if a wrong answer was clicked. Again, a positive gaming experience is in the foreground.
 
-- **Frequent user:**
-  
+- **Older children or adults**
+Especially older children or adults are animated by the countdown to find as many matches as possible. The congratulatory text should therefore also adapt in certain steps, the higher the score is.  
 
 ## Design
 
 - **Imagery:**
   The background image was discovered when searching for a letter image, it perfectly fits the theme that letters need to be searched. In addition, it was very colorful and perfect to generate the colors for the game. 
 - **Colour Scheme:**
-  The colors were determined with the pipette function of the website coloors. In general, the colors are very cheerful and colorful, as it is a game for small children. <br>
+  The colors were determined with the pipette function of the website coloors. In general, the colors are very cheerful and colorful, as it is a game for children. <br>
 
   <details>
   <summary> Color palette </summary>
@@ -117,14 +119,15 @@ During coding I decided to give the child another try to find the correct answer
 All the pages were created with a mobile first approach and are made responsive. To ensure that the layout of the pages remains consistent even on very large screens, the game body has been given a maximum width and a margin on both sides.  
 In the game body, the logo is centered at the top. It works as a link to reset the game to the welcome screen.<br> 
 ![Logo](documentation/readme/letter-match-logo-header.png)<br>
+![Welcome screen](documentation/readme/letter-match-welcome-panel.png)<br>
 
 <details>
 <summary> Instructions </summary>
 <br>
 
-The instructions modal opens and closes, when you click the instructions button. You can also close the modal with the escape key or by clicking on the x on the right corner.<br>
-![Footer mobile version](documentation/readme/letter-match-instructions.png)<br>
-![Footer desktop version](documentation/readme)<br>
+The instructions modal opens and closes, when you click the instructions button. You can also close the modal with the escape key or by clicking on the x on the right corner. The button to open the modal stays above the game, allowing you to access it repeatedly during the game.<br>
+![Instructions modal](documentation/readme/letter-match-instructions.png)<br>
+
 
 </details>
 
@@ -132,10 +135,20 @@ The instructions modal opens and closes, when you click the instructions button.
 <summary> Name input </summary>
 <br>
 
-In the welcome/start game panel or when you load the page, you will be asked for your name. If you enter a name with numbers in it, the game doesn't start and a warning is shown. I decided not to limit the use of special characters, so as not to exclude children with extraordinary names, like the children of Elon Musk. However, it is possible not to specify a name at all, then a placeholder (Abcedarian) is displayed as name. You can submit your name input by clicking on the start game button or with the enter key. This will start the game as well.<br>
-![Name input field](documentation/readme)<br>
-![Name input with numbers](documentation/readme)<br>
-![Name inside the game](documentation/readme)<br>
+In the welcome/start game panel or when you load the page, you will be asked for your name. If you enter a name with numbers in it, the game doesn't start and a warning is shown. I decided not to limit the use of special characters, so as not to exclude children with extraordinary names, like the children of Elon Musk. However, it is possible not to specify a name at all, then a placeholder (Abcedarian) is displayed as name. This is important for younger children who can not write their own name and who may start the game directly by pressing the enter key or clicking on the start game button. It is possible to submit the name input by clicking on the start game button or with the enter key. This will start the game as well.<br>
+![Name input field](documentation/readme/letter-match-name.png)<br>
+![Name input with numbers](documentation/readme/letter-match-name-number.png)<br>
+![Name inside the game](documentation/readme/letter-match-name-game.png)<br>
+
+</details>
+
+<details>
+<summary> Game </summary>
+<br>
+
+The game itself consists of a short rhyme in which the child is asked to find the searched letter in a series of letters. The rhyme does not change during the game, only the letters are exchanged as soon as a correct answer is given. This is important for younger children to have a constant and focus on the letter cards. Within the pink rhyme, the entered name or placeholder appears in green. A different color for the name was chosen for the child to perceive this directly.<br>
+
+![Name inside the game](documentation/readme/letter-match-name-game.png)<br>
 
 </details>
 
@@ -143,7 +156,7 @@ In the welcome/start game panel or when you load the page, you will be asked for
 <summary> Footer </summary>
 <br>
 
-The footer stays on the bottom of the game body and features clickable social media icons and a link to the british council - learn the alphabet website. All links on the footer are opened in a new tab. On tablets or larger screens,the text and the social media icons should appear in one row.<br>
+The footer stays on the bottom of the game body and features clickable social media icons and a link to the british council - learn the alphabet website. All links on the footer are opened in a new tab. On tablets or larger screens,the text and the social media icons should appear in one row to create a picture that is more cohesive.<br>
 ![Footer mobile version](documentation/readme/letter-match-footer-mobile.png)<br>
 ![Footer desktop version](documentation/readme/letter-match-footer-desktop.png)<br>
 
@@ -186,8 +199,8 @@ The footer stays on the bottom of the game body and features clickable social me
   - result for index.html<br>
   In the first attempt I was shown a warning regarding the section where my instruction modal is located.
     ![HTML result index with error](documentation/readme/html-validator-index-error-letter-match.png)<br>
-   After changing this section into a div no more warnings or errors were detected.     
-    ![HTML final result](documentation/readme/html-validator-letter-match.png)
+   After changing this section into a div no more warnings or errors were detected.<br>     
+    ![HTML final result](documentation/readme/html-validator-letter-match.png)<br>
    
 I also checked the page in the validator via text-input, and likewise no errors were detected in this way. All I got was an information to avoid trailing slashes in void elements.
 
@@ -197,7 +210,7 @@ I also checked the page in the validator via text-input, and likewise no errors 
      The warning is due to import of the Google fonts.
 - **[JSHint](https://jshint.com/)**
   - result for sript.js <br>
-  On the first attempt there were some warnings about missing semicolons. After adding this to my javascript, no further warnings or errors were detected.
+  On the first attempt there were some warnings about missing semicolons. After adding the missing semicolons to my javascript, no further warnings or errors were detected.<br>
     ![JSHint result](documentation/readme/jshint-letter-match.png)
 
 2. **Lighthouse Test** <br>
@@ -222,8 +235,21 @@ To ensure the pages are responsive, I used the Google Chrome developer tools.
 | Footer - Social Media icons | Click on the logo of Facebook or Instagram and a new tab with Facebook page or Instagram page opens | After clicking on the logo of Facebook it should open a new tab with the Facebook page, and after clicking on the Instagram logo, Instagram should open in a new tab as well | Pass |
 | Start panel - name input | Name input field should be in focus | After the DOM is loaded the name input field should be in focus and ready to use(mouse pointer inside the field) | Pass |
 | Start panel - name input | Enter a name with numbers | If a name is entered with a number, an error message should be displayed and the game should not start. | Pass |
+| Start panel - name input | Enter a name with more than 15 characters | If a name with more than 15 letters is submitted, it will be canceled at the 15th letter. | Pass |
 | Start panel - name input | Enter a valid name in the name input field and click the start game button or press the Enter key. | If a valid name was entered and the start game button is clicked or the Enter key is pressed, the game should start. | Pass |
-| Start panel - name input | Don’t type a name in the name field or just use a space as name and click the start game button or press the Enter key. | If no name was entered or only spaces and the start game button is clicked or the Enter key is pressed, the game should start and in the name area of the game a placeholder("Abeccderian") should be visible  | Pass |
+| Start panel - name input | Don’t type a name in the name field or just use a space as name and click the start game button or press the Enter key. | If no name was entered or only spaces and the start game button is clicked or the Enter key is pressed, the game should start and in the name area of the game a placeholder("Abeccderian") should be visible. | Pass |
+| Start panel - start game button | Click the start game button to start the game. | If the start game button is clicked, the game should start, the welcome panel should close and if the instructions modal was still open, it should be hidden again. | Pass |
+| Game panel - letters | Start game or give a correct answer. | When the game starts or a correct answer was given, it should shuffle the letters. | Pass |
+| Game panel - letters | Hover over the letters in the letter row with the mouse pointer. | When hovered over the letters in the letter row the background color of the letter should be yellow. | Pass |
+| Game panel - name | Start or restart the game | When the game starts or restarts, the entered name or a placeholder should be appear inside the rhyme | Pass |
+| Game panel - Correct answer | Start or restart the game | When the game starts or restarts, the score should be 0 | Pass |
+| Game panel - Correct answer | In the row of letters, click on the letter corresponding to the rhyme | If you click on the letter corresponding to the rhyme in the row of letters, the score should increase, for a short momemnt a well done messsage should appear and the background of the letter in the letter row should be green | Pass |
+| Game panel - Wrong answer | In the row of letters, click on a letter that is not corresponding to the rhyme | If you click on a letter that is not correspoding to the rhyme, for a short momemnt a "Sorry. Try again" messsage should appear and the background of the letter in the letter row should be red. | Pass |
+| Game panel - Timer | Start or restart the game | When the game starts or restarts, for a brief moment the timer should say "GO!" and then start counting down to 0. | Pass |
+| Game panel - Timer | Let the timer count down to zero. | When the countdown is down to zero, the game panel should close and open the restart game panel. | Pass |
+| Restart game panel - Score | Let the timer count down to zero. | When the countdown is down to zero, the current score should be visible above the start game button. | Pass |
+| Restart game panel - Score | Let the timer count down to zero. | When the countdown is down to zero, depending on the score a try again/congratulations message should be displayed. | Pass |
+| Start/Restart game button | Hover over the start/restart game button with the mouse pointer. | When hovered over start/restart game button it should be pink. | Pass |
 
 
 4. **Browser Compatibility**<br>
