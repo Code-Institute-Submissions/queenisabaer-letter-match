@@ -135,16 +135,21 @@ function incrementScore() {
 }
 
 //Add eventlisteners for the letterCards
-document.getElementById("letterOne").addEventListener("click", function() { checkAnswer("letterOne"); });
-document.getElementById("letterTwo").addEventListener("click", function() { checkAnswer("letterTwo"); });
-document.getElementById("letterThree").addEventListener("click", function() { checkAnswer("letterThree"); });
-document.getElementById("letterFour").addEventListener("click", function() { checkAnswer("letterFour"); });
-document.getElementById("letterFive").addEventListener("click", function() { checkAnswer("letterFive"); });
-   
+let answerElements = document.querySelectorAll("#letterMatch > .letterCard");
+
+for (let answerElement of answerElements) {
+    answerElement.addEventListener(
+        "click",
+        function () {
+            checkAnswer(answerElement.id);
+        }
+    );
+}
+
 /** Checks what the correct answer is based on which letter was clicked */
 function correctAnswer(clickedLetter) {
-    var correct = document.getElementById("correct");
-    var wrong = document.getElementById("wrong");
+    const correct = document.getElementById("correct");
+    const wrong = document.getElementById("wrong");
 
     //Check if the clicked letter matches the letter in the rhyme
     let questionLetter = document.getElementById("letterZero");
@@ -170,14 +175,14 @@ function correctAnswer(clickedLetter) {
         setTimeout(function() {
             wrong.classList.add("hidden");
             questionLetter.style.backgroundColor = "rgba(145, 213, 234, 0.5)";
-            }, 1500);  
+            }, 1000);  
     }
 }
 
 /** Check which letter was clicked */
 function checkAnswer (clickedLetterID){
     //Get clicked letter by its id
-    var clickedLetter = document.getElementById(clickedLetterID).textContent;
+    const clickedLetter = document.getElementById(clickedLetterID).textContent;
     correctAnswer(clickedLetter);
 }
 
