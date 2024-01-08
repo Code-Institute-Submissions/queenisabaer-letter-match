@@ -245,7 +245,7 @@ function restartGame() {
   } else if (score.innerText < 30) {
     congratulations.innerText = "Incredible! You've just mastered that.";
   } else {
-    congratulations.innerText = "Great job"; 
+    congratulations.innerText = "Great job";
   }
 
   //restart the game by clicking the button

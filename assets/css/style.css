@@ -3,264 +3,291 @@
 @import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Are+You+Serious&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400;1,700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* General styles */
 body {
-    text-align: center;
-    width: 100vw;
-    height: 100vh;
-    background: url(../images/letters-on-a-table-pexels-magda-ehlers-4116706.webp) no-repeat center center/cover;
-    /* Fall-back color, if the image doesn't load */
-    background-color: #91D5EA;
-    font-family: "Annie Use Your Telescope", sans-serif;
-    position: relative;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/letters-on-a-table-pexels-magda-ehlers-4116706.webp)
+    no-repeat center center/cover;
+  /* Fall-back color, if the image doesn't load */
+  background-color: #91d5ea;
+  font-family: "Annie Use Your Telescope", sans-serif;
+  position: relative;
 }
 
 .gameBody {
-    background-color: rgba(251, 288, 234, 0.8);
-    margin: 35px auto 0 auto;
-    height: 90%;
-    width: 80%;
-    max-width: 900px;
-    max-height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
+  background-color: rgba(251, 288, 234, 0.8);
+  margin: 35px auto 0 auto;
+  height: 90%;
+  width: 80%;
+  max-width: 900px;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 h1 {
-    font-family: "Are You Serious", serif;
-    font-size: 3rem;
-    color: #78278A;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
+  font-family: "Are You Serious", serif;
+  font-size: 3rem;
+  color: #78278a;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
 }
 
 h2 {
-    color: #78278A;
-    font-weight: 400;
-    margin: 10px;
-    font-size: 175%;
+  color: #78278a;
+  font-weight: 400;
+  margin: 10px;
+  font-size: 175%;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .text {
-    color: #FA558A;
-    font-size: 125%;
+  color: #fa558a;
+  font-size: 125%;
 }
 
 /* Instructions modal */
 .btn-rules {
-    color: #78278A;
-    border: 1px solid #78278A;
-    width: 125px;
-    height: 25px;
-    background: rgb(145,213,234); /* Fallback color */
-    background: linear-gradient(45deg, rgba(145,213,234,1) 0%, rgba(251,228,234,1) 100%);
-    border-radius: 15px;
-    font-family: "Barlow Semi Condensed";
-    font-size: 110%;
-    padding-bottom: 3px;
-    margin-top: 15px;
-    cursor: pointer;
+  color: #78278a;
+  border: 1px solid #78278a;
+  width: 125px;
+  height: 25px;
+  background: rgb(145, 213, 234); /* Fallback color */
+  background: linear-gradient(
+    45deg,
+    rgba(145, 213, 234, 1) 0%,
+    rgba(251, 228, 234, 1) 100%
+  );
+  border-radius: 15px;
+  font-family: "Barlow Semi Condensed";
+  font-size: 110%;
+  padding-bottom: 3px;
+  margin-top: 15px;
+  cursor: pointer;
 }
 
 .modal-content {
-    font-family: "Barlow Semi Condensed";
-    font-size: 110%;
-    color: #78278A;
-    margin: 10px auto;
-    background: #FBE4EA;
-    background: linear-gradient(45deg, rgba(251,228,234,1) 0%,rgba(145,213,234,1) 100%);
-    padding: 0.5rem;
-    text-align: left;
-    list-style-position: inside;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    max-width: max-content;
-    position: absolute;
-    /* to center the modal content after setting its position to absolut*/
-    left: 50%;
-    transform: translate(-50%);
+  font-family: "Barlow Semi Condensed";
+  font-size: 110%;
+  color: #78278a;
+  margin: 10px auto;
+  background: #fbe4ea;
+  background: linear-gradient(
+    45deg,
+    rgba(251, 228, 234, 1) 0%,
+    rgba(145, 213, 234, 1) 100%
+  );
+  padding: 0.5rem;
+  text-align: left;
+  list-style-position: inside;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  max-width: max-content;
+  position: absolute;
+  /* to center the modal content after setting its position to absolut*/
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .btn-close {
-    background-color: transparent;
-    font-size: 125%;
-    border: none;
-    color: #78278A;
-    align-self: flex-end;
-    margin-right: 5px;
-    margin-top: 5px;
+  background-color: transparent;
+  font-size: 125%;
+  border: none;
+  color: #78278a;
+  align-self: flex-end;
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
 .btn-close:hover {
-    color: #FA558A;
-    cursor: pointer;
+  color: #fa558a;
+  cursor: pointer;
 }
 
 .modal-content li {
-    margin: 5px;
+  margin: 5px;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-#start, #restart {
-    margin-top: 40px;
+#start,
+#restart {
+  margin-top: 40px;
 }
 
 /* Name area */
 #name-input {
-    background-color: rgba(145, 213, 234, 0.5);
-    border: #91D5EA ridge;
-    border-radius: 5px;
-    height: fit-content;
-    width: 125px;
-    padding: 5px;
-    font-family: "Annie Use Your Telescope";
-    font-weight: 400;
-    font-size: 125%;
-    color: #FA558A;
-    text-align: center;
+  background-color: rgba(145, 213, 234, 0.5);
+  border: #91d5ea ridge;
+  border-radius: 5px;
+  height: fit-content;
+  width: 125px;
+  padding: 5px;
+  font-family: "Annie Use Your Telescope";
+  font-weight: 400;
+  font-size: 125%;
+  color: #fa558a;
+  text-align: center;
 }
 
 .supText {
-    font-size: 1rem;
-    color: #FA558A;
+  font-size: 1rem;
+  color: #fa558a;
 }
 
 /* Start game area*/
-.btn-start, .btn-restart {
-    background-color: transparent;
-    font-size: 5rem;
-    border: none;
-    color: #78278A;
-    margin-top: 35px;
-    cursor: pointer;
+.btn-start,
+.btn-restart {
+  background-color: transparent;
+  font-size: 5rem;
+  border: none;
+  color: #78278a;
+  margin-top: 35px;
+  cursor: pointer;
 }
 
-.btn-start:active, .btn-restart:active {
-    color: #FA558A;
+.btn-start:active,
+.btn-restart:active {
+  color: #fa558a;
 }
 
 /* Game area */
 .gameBottom {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
-    margin-top: 30px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  margin-top: 30px;
 }
 
 #game > p {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 #letterZero {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .letterCard {
-    color: #78278A;
-    font-size: 200%;
-    border: 1px solid;
-    border-radius: 3px;
-    padding: 0 10px;
-    background-color: rgba(145, 213, 234, 0.5);
-    display: inline-block;
-    width: fit-content;
-    min-width: 20px;
+  color: #78278a;
+  font-size: 200%;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 0 10px;
+  background-color: rgba(145, 213, 234, 0.5);
+  display: inline-block;
+  width: fit-content;
+  min-width: 20px;
 }
 
-#answers, #time, #childName, #score {
-    font-size: 150%;
-    color: #05A550;;
+#answers,
+#time,
+#childName,
+#score {
+  font-size: 150%;
+  color: #05a550;
 }
 
 /* When lettercard inside the letter row is clicked, apply a 3 seconds transition to its size and background color */
 #letterMatch > span:active {
-    transform: scale(0.97);
-    transition: transform .3s;
-    background-color: rgba(247, 225, 29, 0.5); /* UX: to see which letter was chosen*/
+  transform: scale(0.97);
+  transition: transform 0.3s;
+  background-color: rgba(
+    247,
+    225,
+    29,
+    0.5
+  ); /* UX: to see which letter was chosen*/
 }
 
 /* Footer */
 .britishcouncil a {
-    color: #78278A;
-    font-variant: small-caps;
-    font-size: 140%;
+  color: #78278a;
+  font-variant: small-caps;
+  font-size: 140%;
 }
 
 .scl-net {
-    text-decoration: none;
-    list-style-type: none;
-    padding-left: 0;
+  text-decoration: none;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .scl-net li {
-    display: inline-block;
-    font-size: 130%;
+  display: inline-block;
+  font-size: 130%;
 }
 
 .scl-net i {
-    color: #78278A;
-    padding: 0 10px;
+  color: #78278a;
+  padding: 0 10px;
 }
 
 /* larger or landscape phones (768px or larger) */
 @media screen and (min-width: 768px) {
-    .gameBody {
-        margin-top: 40px;
-    }
+  .gameBody {
+    margin-top: 40px;
+  }
 
-    /* Make the logo and text larger */
-    h1 {
-        font-size: 4.5rem;
-    }
+  /* Make the logo and text larger */
+  h1 {
+    font-size: 4.5rem;
+  }
 
-    #game, #restart {
-        font-size: 150%;
-    }
+  #game,
+  #restart {
+    font-size: 150%;
+  }
 
-    .btn-rules {
-        height: 35px;
-        width: 150px;
-        font-size: 125%;
-    }
+  .btn-rules {
+    height: 35px;
+    width: 150px;
+    font-size: 125%;
+  }
 
-    /* Make the content of the footer area appear next to each other with space between */
-    .btm-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-end;
-        font-size: 125%;
-    }
+  /* Make the content of the footer area appear next to each other with space between */
+  .btm-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: 125%;
+  }
 
-    /* Add some space between the letters and the border of the cards */
-    .letterCard {
-        padding: 0 15px;
-    }
+  /* Add some space between the letters and the border of the cards */
+  .letterCard {
+    padding: 0 15px;
+  }
 }
 
 /* laptops (1024px or larger) */
 @media screen and (min-width: 1024px) {
-    #letterMatch > span:hover {
-        background-color: rgba(247, 225, 29, 0.5); /* UX: to see which letter was chosen*/
-    }
-    
-    .btn-start:hover, .btn-restart:hover {
-        color: #FA558A;
-    }
+  #letterMatch > span:hover {
+    background-color: rgba(
+      247,
+      225,
+      29,
+      0.5
+    ); /* UX: to see which letter was chosen*/
+  }
+
+  .btn-start:hover,
+  .btn-restart:hover {
+    color: #fa558a;
+  }
 }
