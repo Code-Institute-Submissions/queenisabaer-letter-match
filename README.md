@@ -47,34 +47,54 @@ Goals for:
 ### Wireframes
 
 <details>
-<summary>Page before game is started</summary>
+<summary> Welcome page before game starts </summary>
 <br>
 
-![Mobile wireframe](documentation/wireframes)
-![Desktop wireframe](documentation/wireframes)
+![Mobile wireframe](documentation/wireframes/letter-match-start-mobile.png)
+![Desktop wireframe](documentation/wireframes/letter-match-start-desktop.png)
 
 </details>
 
 <details>
-<summary>Game</summary>
+<summary> Instructions </summary>
 <br>
 
-![Mobile wireframe](documentation/wireframes)
-![Desktop wireframe](documentation/wireframes)
+![Mobile wireframe](documentation/wireframes/letter-match-start-mobile-instructions.png)
+![Desktop wireframe](documentation/wireframes/letter-match-start-desktop-instructions.png)
 
 </details>
 
 <details>
-<summary> gallery.html </summary>
+<summary> Game </summary>
 <br>
 
-![Mobile wireframe](documentation/wireframes)
-![Desktop wireframe](documentation/wireframes)
+![Mobile wireframe](documentation/wireframes/letter-match-game-mobile.png)
+![Desktop wireframe](documentation/wireframes/letter-match-game-desktop.png)
 
 </details>
 
 <details>
-<summary> contact.html </summary>
+<summary> Correct answer </summary>
+<br>
+Unfortunately, due to lack of time, I did not manage to set the background colors correctly for wrong or correct answers.<br>
+
+![Mobile wireframe](documentation/wireframes/letter-match-game-mobil-correct.png)
+![Desktop wireframe](documentation/wireframes/letter-match-game-desktop-correct.png)
+
+</details>
+
+<details>
+<summary> Wrong answer </summary>
+<br>
+During coding I decided to give the child another try to find the correct answer, so that he/she/they could improve his/her/their skill. Therefore, displaying the correct letter was no longer necessary.
+
+![Mobile wireframe](documentation/wireframes/letter-match-game-mobil-wrong.png)
+![Desktop wireframe](documentation/wireframes/letter-match-game-mobil-wrong.png)
+
+</details>
+
+<details>
+<summary> Game ending </summary>
 <br>
 
 ![Mobile wireframe](documentation/wireframes)
@@ -137,8 +157,8 @@ I also checked all pages in the validator via text-input, and likewise no errors
   
 
 3. **Manual testing** <br>
-
 To ensure the pages are responsive, I used the Google Chrome developer tools.
+
 | **Test** | **Test Description** | **Expected Outcome** | **Result**|
 |:---|:---|:---|:---|
 
@@ -190,7 +210,8 @@ After refreshing the settings site for this repository above the **"Build and de
 - To center the instructions modal I used an explanation from [Stack Overflow](https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element).
 - To create the countdown I used the instruction by [James McDowell on Stack Overflow](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown)
 - I found a great explanation for setting the restart button in the [Treehouse Community](https://teamtreehouse.com/community/any-one-know-how-to-make-a-restart-button)
-- How to add and remove a class after a period of time, was found at [ITSourceCode.com] (https://itsourcecode.com/javascript-tutorial/how-to-add-and-remove-class-after-5-seconds-in-javascript/).
+- How to add and remove a class after a certain time, was found at [ITSourceCode.com] (https://itsourcecode.com/javascript-tutorial/how-to-add-and-remove-class-after-5-seconds-in-javascript/).
+- The functions to check whether the right or wrong letter is clicked have been inspired by [CodingNepal] (https://www.codingnepalweb.com/build-memory-card-game-html-javascript/) among others. 
 - To understand more about the concepts of JavaScript I used the udemy course: [The complete 2023 Web Development Bootcamp by Dr. Angela Yu](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
 - The following websites were used as a source of knowledge: <br>
   - [Google](www.google.com)

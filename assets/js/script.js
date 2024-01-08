@@ -146,27 +146,27 @@ function correctAnswer(clickedLetter) {
 
     //Check if the clicked letter matches the letter in the rhyme
     let questionLetter = document.getElementById("letterZero");
-
+    questionLetter.style.backgroundColor = "rgba(145, 213, 234, 0.5)"
     if (clickedLetter === questionLetter.textContent) { 
-        //if the answer was correct, display the well done box for 1.5 seconds, 
+        //if the answer was correct, display the well done box for 1 seconds, 
         //increase score by one and shuffle the letters again
         correct.classList.remove("hidden");
-        //to add the class after 1.5 seconds I used the instruction by Caren Bautista from ITSourceCode.com
+        //to add the class after 1 seconds I used the instruction by Caren Bautista from ITSourceCode.com
         setTimeout(function() {
             correct.classList.add("hidden");
-            }, 1500);
+            questionLetter.style.backgroundColor = "rgba(5,165,80, 0.5)";
+            }, 1000);
         incrementScore();
         letterInput();
     } else { 
         //if the answer was wrong, 
         //diplay wrong answer box for 1.5 seconds and shuffle the letters again
         wrong.classList.remove("hidden");
-        questionLetter.style.backgroundColor = "red";
+        questionLetter.style.backgroundColor = "rgba(225,37,51, 0.5)";
         setTimeout(function() {
-            wrong.classList.add("hidden");
-            questionLetter.style.backgroundColor = "rgba(145, 213, 234, 0.5)"
-            }, 1500);
             
+            questionLetter.style.backgroundColor = "rgba(145, 213, 234, 0.5)";
+            }, 1500);  
     }
 }
 
