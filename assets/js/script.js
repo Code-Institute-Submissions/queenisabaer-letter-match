@@ -3,7 +3,7 @@
 //Wait for the DOM to finish loading and add event listeners to button elements
 document.addEventListener("DOMContentLoaded", function () {
   //Event listener for the instructions button.
-  //Opens the modal, when the modal content does have a class of hidden
+  //Opens the modal, when the modal content does have a class of hidden,
   //and closes the modal when it doesn't.
   openModalBtn.addEventListener("click", function () {
     if (modalContent.classList.contains("hidden")) {
@@ -43,7 +43,7 @@ const startGameBtn = document.querySelector(".btn-start");
 
 /*
 Create the modal for the instructions, 
-so that the rules are only visible, when the button is clicked.
+so that the rules are only visible when the button is clicked.
 The modal should overlay the content and
 close, when the x-button is clicked.
 I used a tutorial by Victor Eke from freeCodeCamp
@@ -58,9 +58,9 @@ let closeModal = function () {
   modalContent.classList.add("hidden");
 };
 
-/** startGame function hides the welcome panel,
+/** Hides the welcome panel,
  * displays the game area and starts the game
- * it runs again when restart game button is clicked */
+ * it runs again when the restart game button is clicked */
 function startGame() {
   let start = document.getElementById("start");
   let game = document.getElementById("game");
@@ -126,7 +126,7 @@ function getRandomLetter() {
 }
 
 /** Pick one random letter from a given set of letters and
- * return it for matching in the question of the rhyme
+ * return it for matching in the rhyme question.
  * @param {string} letters - Set of letters from which to randomly pick the letter.
  * @return {string} A randomly selected letter from the provided set. */
 function getQuestionLetter(letters) {
@@ -159,7 +159,7 @@ function incrementScore() {
 }
 
 //Add eventlisteners for the letterCards.
-//I tried to create a loop for these event listeners, but then a warning in jshint was displayed(Readme => Features in the future)
+//I tried to create a loop for these event listeners, but then a warning in JSHint was displayed(Readme => Features in the future)
 document.getElementById("letterOne").addEventListener("click", function () {
   checkAnswer("letterOne");
 });
@@ -177,7 +177,7 @@ document.getElementById("letterFive").addEventListener("click", function () {
 });
 
 /** Checks what the correct answer is based on which letter was clicked.
- * Depending on the answer a message is shown and the background color changes for a brief moment.
+ * Depending on the answer, a message is shown and the background color changes for a brief moment.
  * If the answer was correct, the letters are mixed again and the score increases.
  * @param {string} clickedLetter - The letter clicked by the user.
  */
@@ -224,8 +224,8 @@ function checkAnswer(clickedLetterID) {
   correctAnswer(clickedLetter);
 }
 
-/** Starts a countdown of 45 seconds inside of the game
- * as soon as button to start the game is clicked.
+/** Starts a countdown of 45 seconds inside the game
+ * as soon as the button to start the game is clicked.
  * When time is up, the restartGame function runs and the timer is reset */
 function timer() {
   //Used the instruction by James McDowell on Stack Overflow
@@ -243,7 +243,7 @@ function timer() {
 }
 
 /**  Displays the final score and the (re-)start game button, to run the game again
- * Depending on the score a congratulation text is displayed.
+ * Depending on the score, a congratulation text is displayed.
  * If the (re-)start game button is clicked, the startGame function runs and the score is reset
  */
 function restartGame() {
@@ -253,7 +253,7 @@ function restartGame() {
   restart.classList.remove("hidden");
   endgame.classList.add("hidden");
 
-  // Add final score to restart game panel and depending on the score show congratulations
+  // Add final score to restart game panel and depending on the score, show congratulations
   let score = document.getElementById("score");
   let congratulations = document.getElementById("congrats");
   score.innerText = document.getElementById("answers").innerText;
