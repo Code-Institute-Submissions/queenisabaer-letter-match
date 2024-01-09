@@ -98,8 +98,8 @@ Unfortunately, due to lack of time, I did not manage to set the background color
 <br>
 During coding I decided to give the child another try to find the correct answer, so that he/she/they could improve his/her/their skill. Therefore, displaying the correct letter was no longer necessary.<br>
 
-![Mobile wireframe](documentation/wireframes/letter-match-game-mobil-wrong.png)
-![Desktop wireframe](documentation/wireframes/letter-match-game-mobil-wrong.png)
+![Mobile wireframe](documentation/wireframes/letter-match-game-desktop-wrong.png)
+![Desktop wireframe](documentation/wireframes/letter-match-game-desktop-wrong.png)
 
 </details>
 
