@@ -24,10 +24,10 @@ Letter Match is a game for kindergarten and preschool children. Its main goal is
 
 Goals for:
 
-- **Children learning the alphabet: Preschool or Kindergarten** <br>
+- **Children learning the alphabet(Preschool or Kindergarten)** <br>
 Children who are just learning the alphabet should be able to grasp the game and recognize the letter matches. Especially the start of the game should be accompanied by parents to explain the rules and possibly help with typing the name. As a future function, an audio file should be included, which reads the rules. If no name is entered and the start button was clicked directly, the game should still be running and a green placeholder name should be displayed. The start button should be easy to recognize.  The letters to look for should be easily recognizable. In order to grant a positive experience, points are not deducted and only points resulting from correct answers are counted. 
 
-- **Children knowing the alphabet: Class 1 or higher** <br>
+- **Children knowing the alphabet(Class 1 or higher)** <br>
 Children who already know the alphabet or can even read and write should also be able to easily understand the game and recognize the letter matches. Entering the name should be easy for you to understand. Correct answers are encouraged by congratulations, wrong answers give the opportunity to try again. Nevertheless, it is also about positive reinforcement, so no negative points are awarded in the game, if a wrong answer was clicked. Again, a positive gaming experience is in the foreground.
 
 - **Older children or adults** <br>
@@ -119,13 +119,14 @@ During coding I decided to give the child another try to find the correct answer
 All the pages were created with a mobile first approach and are made responsive. To ensure that the layout of the pages remains consistent even on very large screens, the game body has been given a maximum width and a margin on both sides.  
 In the game body, the logo is centered at the top. It works as a link to reset the game to the welcome screen.<br> 
 ![Logo](documentation/readme/letter-match-logo-header.png)<br>
-![Welcome screen](documentation/readme/letter-match-welcome-panel.png)<br>
+![Welcome screen mobile](documentation/readme/letter-match-mobile-start.png)<br>
+![Welcome screen desktop](documentation/readme/letter-match-welcome-panel.png)<br>
 
 <details>
 <summary> Instructions </summary>
 <br>
 
-The instructions modal opens and closes, when you click the instructions button. You can also close the modal with the escape key or by clicking on the x on the right corner. The button to open the modal stays above the game, allowing you to access it repeatedly during the game.<br>
+The instructions modal opens and closes, when you click the instructions button. You can also close the modal with the escape key or by clicking on the x in the right upper corner. The button to open the modal stays above the game, allowing you to access it repeatedly during the game.<br>
 ![Instructions modal](documentation/readme/letter-match-instructions.png)<br>
 
 
@@ -148,7 +149,7 @@ In the welcome/start game panel or when you load the page, you will be asked for
 
 The game itself consists of a short rhyme in which the child is asked to find the searched letter in a series of letters. The rhyme does not change during the game, only the letters are exchanged as soon as a correct answer is given. This is important for younger children to have a constant and focus on the letter cards. Within the pink rhyme, the entered name or placeholder appears in green. A different color for the name was chosen for the child to perceive directly.<br>
 ![Name inside the game](documentation/readme/letter-match-name-game.png)<br>
-The letters to be matched rearrange themselves, after a correct answer was given so that it remains a challenge. In addition, a timer was set so that the game is limited. For a brief moment, a "GO!" is displayed in the timer to not lose a second of the 45 seconds and encourage the child. Only the correct answers are counted during the game to ensure a positive gaming experience for children. <br>
+The letters to be matched rearrange themselves, after a correct answer was given so that it remains a challenge. In addition, a timer was set so that the game is limited. In the beginning of the game for a brief moment, a "GO!" is displayed in the timer to not lose a second of the 45 seconds and encourage the child. Only the correct answers are counted during the game to ensure a positive gaming experience for children. <br>
 ![Game panel](documentation/readme/letter-match-game-start-go.png)<br>
 When the correct letter is clicked, a "Well done" message appears for a short moment and the letter in the rhyme turns green. Then the letter cards are mixed again. <br>
 ![Game panel](documentation/readme/letter-match-correct-answer.png)<br>
@@ -191,6 +192,9 @@ The footer stays on the bottom of the game body and features clickable social me
 
 ### Features, which I would like to implement in the future
 
+- I've tried to create a loop for the click event listener for the letter cards, but this caused a warning in JSHint. Since I ran out of time, I changed it back to my original version, but would like to figure this out in the future. <br>
+![Loop of event listener](documentation/readme/letter-match-loop-event-listener.png)<br>
+![Warning in JSHint](documentation/readme/jshint-letter-match-warning.png)<br>
 - I would like to create different levels of difficulty for the game. For example, that you can choose whether you want to match only uppercase letters or whether you compare between uppercase and lowercase letters. 
 - I would like to allow a selection where you can set the time (e.g. 20/30/45/60 seconds).
 - Add a highscore. 
@@ -277,13 +281,15 @@ To ensure the pages are responsive, I used the Google Chrome developer tools.
 | Restart game panel - Score | Let the timer count down to zero. | When the countdown is down to zero, depending on the score a try again/congratulations message should be displayed. | Pass |
 | Start/Restart game button | Hover over the start/restart game button with the mouse pointer. | When hovered over start/restart game button it should be pink. | Pass |
 
+I tried the game with my children. The younger (preschool in kindergarten) played it on the mobile phone and the older (4th grade) on the laptop. My younger child was helped typing the name on the first try. After the window had refreshed again, she clicked the start button in another game. The fact that her name was no longer there, she found not bad. 
+My older child had no difficulty understanding the meaning of the game. He is especially encouraged to improve his own high score. Both children have only a basic understanding of English, but were able to grasp the game without difficulty. 
 
 4. **Browser Compatibility**<br>
    The tests were conducted using the following browsers:
 
 - Google Chrome Version 120.0.6099.129
-- Safari on Mac Version 17.0 (17616.1.27.111.22, 17616)
-- Safari on iOS 17.1.2
+- Safari on Mac Version 17.0 (17616.1.27.111.22, 17616) 
+- Safari on iOS 17.2.1
 - Edge Version 120.0.2210.61
 
 5. **Bugs**
