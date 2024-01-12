@@ -301,22 +301,22 @@ My older child had no difficulty understanding the meaning of the game. He is es
 
 This site is deployed using GitHub Pages. To deploy it from its GitHub repository to GitHub Pages, I took the following steps:
 1. Log in (or sign up) to GitHub.
-2. Navigate to the repository for this project by selecting [*queenisabaer/isbaner-vineyard*](https://github.com/queenisabaer/isbaner-vineyard)
+2. Navigate to the repository for this project by selecting [*queenisabaer/letter-match*](https://github.com/queenisabaer/letter-match)
 3. Click the *Settings* tab above the repository 
 4. In the left-hand menu, select *Pages*
 5. In the section **"Build and deployment"** under *Source* select *Deploy from a branch* 
 6. In the section **"Build and deployment"** under *Branch* select in the first area *main* and in the second *root*
 7. Click the *Save* Button<br>
-After refreshing the settings site for this repository above the **"Build and deployment"** section, you will see the GitHub Pages area with the link to the [view of the live site](https://queenisabaer.github.io/isbaner-vineyard/)
+After refreshing the settings site for this repository above the **"Build and deployment"** section, you will see the GitHub Pages area with the link to the [view of the live site](https://queenisabaer.github.io/letter-match/)
 
 - Forking this GitHub repository
 1.  Log in to GitHub.
-2.  Navigate to the repository for this project by selecting [*queenisabaer/isbaner-vineyard*](https://github.com/queenisabaer/isbaner-vineyard)
+2.  Navigate to the repository for this project by selecting [*queenisabaer/letter-match*](https://github.com/queenisabaer/letter-match)
 3. Click at the top of the repository on the **Fork** button on the right side
 
 - Clone this repository
 1.  Log in to GitHub.
-2.  Navigate to the repository for this project by selecting [*queenisabaer/isbaner-vineyard*](https://github.com/queenisabaer/isbaner-vineyard)
+2.  Navigate to the repository for this project by selecting [*queenisabaer/letter-match*](https://github.com/queenisabaer/letter-match)
 3. In the top right corner, click on the green *Code* button
 4. Copy the HTTPS URL in the tab *Local*
 5. Go to the code editor of your choice and open the terminal
